@@ -7,12 +7,12 @@ import org.testng.asserts.SoftAssert;
 import pageObjects.LogoHomePage;
 import utilities.ContextSetUp;
 
-public class LogoStepDefinition
+public class LogoStepDefinitionTest
 {
     public ContextSetUp contextSetUp;
     public LogoHomePage logoHomePage;
 
-    public LogoStepDefinition(ContextSetUp contextSetUp)
+    public LogoStepDefinitionTest(ContextSetUp contextSetUp)
     {
         this.contextSetUp=contextSetUp;
         logoHomePage=contextSetUp.pageObjectManager.getLogoHomePage();
