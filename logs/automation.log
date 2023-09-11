@@ -1,0 +1,42 @@
+07:56:06.288 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+07:56:35.234 [main] INFO  logManager.LoggerHelper - Waiting for element to view
+07:56:35.342 [main] INFO  logManager.LoggerHelper - Scroll to view started
+07:56:35.405 [main] INFO  logManager.LoggerHelper - Scrolling done
+07:56:35.621 [main] INFO  logManager.LoggerHelper - Mouse hover done
+07:56:35.957 [main] INFO  logManager.LoggerHelper - Add to cart clicked
+07:56:37.233 [main] INFO  logManager.LoggerHelper - Clicked on view cart
+07:56:38.622 [main] INFO  logManager.LoggerHelper - Clicked on checkout button on cart details screen
+07:56:38.838 [main] INFO  logManager.LoggerHelper - Comment provided in comment field
+07:56:39.923 [main] INFO  logManager.LoggerHelper - PLace order clicked
+07:56:40.805 [main] INFO  logManager.LoggerHelper - All the Payment details completely submitted
+07:56:43.696 [main] INFO  logManager.LoggerHelper - Clicked on confirm order
+08:02:17.661 [main] INFO  logManager.LoggerHelper - Waiting for element to view
+08:02:17.773 [main] INFO  logManager.LoggerHelper - Scroll to view started
+08:02:17.845 [main] INFO  logManager.LoggerHelper - Scrolling done
+08:02:18.086 [main] INFO  logManager.LoggerHelper - Mouse hover done
+08:02:18.439 [main] INFO  logManager.LoggerHelper - Add to cart clicked
+08:02:21.351 [main] INFO  logManager.LoggerHelper - Clicked on view cart
+08:02:23.508 [main] INFO  logManager.LoggerHelper - Clicked on checkout button on cart details screen
+08:02:23.827 [main] INFO  logManager.LoggerHelper - Comment provided in comment field
+08:02:24.883 [main] INFO  logManager.LoggerHelper - PLace order clicked
+08:02:25.539 [main] INFO  logManager.LoggerHelper - All the Payment details completely submitted
+08:02:28.447 [main] INFO  logManager.LoggerHelper - Clicked on confirm order
+08:02:28.479 [main] INFO  logManager.LoggerHelper - Assertions done
+08:02:28.792 [AsyncHttpClient-1-4] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
+java.net.SocketException: Connection reset
+	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256) ~[netty-buffer-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) [netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) [netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) [netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
