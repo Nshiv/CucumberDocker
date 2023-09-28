@@ -1,7 +1,6 @@
 Feature: Place Order
-
-  Background: I handle ads on browser
-    @wip
+  
+    @smoke
     Scenario: Place order after login
       Then I verify homepage Title is "Automation Exercise"
       When I click on Sign in button

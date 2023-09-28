@@ -4,67 +4,79 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
+import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
-public class TestBase
-{
+public class TestBase {
+
     public WebDriver driver;
+    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+    public synchronized WebDriver webDriverManager() throws IOException {
 
-    public WebDriver WebDriverManager() throws IOException {
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/global.properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/global.properties");
         Properties prop = new Properties();
         prop.load(fis);
-        String project_url=prop.getProperty("url1");
+        String platform = prop.getProperty("remote");
+        String hubURL = prop.getProperty("hubURL");
         String browser_prop = prop.getProperty("browser");
         String browser_maven = System.getProperty("browser");
         String browser = browser_maven != null ? browser_maven:browser_prop;
-        if(driver==null) {
-            //URL hubUrl = new URL("http://15.207.88.140:4444/wd/hub");
-            if(browser.equalsIgnoreCase("chrome"))
+        String project_url = prop.getProperty("url");
+            if (platform.equalsIgnoreCase("no"))
             {
-                ChromeOptions options = new ChromeOptions();
-                options.setAcceptInsecureCerts(true);
-                options.addArguments("start-maximized"); // Maximize browser window
-                options.addArguments("disable-infobars"); // Disable infobars
-                options.setBinary("C:\\Users\\ASUS1\\Downloads\\ChromeBrowser\\chrome-win64\\chrome-win64\\chrome.exe");
-                options.addExtensions(new File("./extensions/AdBlock5.9.0.0.crx"));
-                options.addArguments("--disable-javascript");
-                options.addArguments("ignore-certificate-errors");
-                //options.addArguments("--headless");
-                driver = new ChromeDriver(options);
-                //driver = new RemoteWebDriver(hubUrl,options);
-                driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-                driver.manage().window().maximize();
-                driver.get(project_url);
-            }
-           else if(browser.equalsIgnoreCase("edge"))
-            {
-                EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.setAcceptInsecureCerts(true);
-                driver= new EdgeDriver();
-                driver.get(project_url);
-                driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-                driver.manage().window().maximize();
-                //driver = new RemoteWebDriver(hubUrl,edgeOptions);
-            }
-           else {
-                System.out.println("Invalid browser inputs"+browser);
-            }
+                if (browser.trim().equalsIgnoreCase("chrome"))
+                {
+                    String chromeDriverPath = "src/test/resources/testDrivers/chromedriver.exe";
+                    System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+                    ChromeOptions options = getChromeOptions();
+                    tlDriver.set(new ChromeDriver(options));
 
-            //driver.get(project_url);
+                } else if (browser.trim().equalsIgnoreCase("edge"))
+                {
+                    String edgeDriverPath = "src/test/resources/testDrivers/msedgedriver.exe";
+                    System.setProperty("webdriver.edge.driver", edgeDriverPath);
+                    tlDriver.set(new EdgeDriver());
+                } else if (browser.trim().equalsIgnoreCase("firefox"))
+                {
+                    String geckoDriverPath = "src/test/resources/testDrivers/geckodriver.exe";
+                    System.setProperty("webdriver.gecko.driver", geckoDriverPath);
+                    tlDriver.set(new FirefoxDriver());
+                }
+
+                if(!(getDriver()==null))
+                {
+                    getDriver().manage().window().maximize();
+                    getDriver().get(project_url);
+                    getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                }
+            }return getDriver();
+    }
+
+    public static synchronized WebDriver getDriver()
+    {
+       return tlDriver.get();
+    }
+
+    public  synchronized void quitDriver()
+    {
+        WebDriver driver = tlDriver.get();
+        if (driver != null) {
+            driver.quit();
+            tlDriver.remove();
         }
-        return driver;
+    }
+    private static ChromeOptions getChromeOptions()
+    {
+        ChromeOptions options = new ChromeOptions();
+        options.setAcceptInsecureCerts(true);
+        options.addArguments("start-maximized");
+        options.addArguments("disable-infobars");
+        options.setBinary("C:\\Users\\ASUS1\\Downloads\\ChromeBrowser\\chrome-win64\\chrome-win64\\chrome.exe");
+        options.addArguments("--disable-javascript");
+        options.addArguments("ignore-certificate-errors");
+        return options;
     }
 }

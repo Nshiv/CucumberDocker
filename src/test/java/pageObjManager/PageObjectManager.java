@@ -18,7 +18,6 @@ public class PageObjectManager
     public TestCasesPage testCasesPage;
     public ProductsListingScreen productsListingScreen;
     public ProductDetailsScreen productDetailsScreen;
-    public HandleNewWindowOnLaunch handleNewWindowOnLaunch;
     public CartPage cartPage;
     public CheckoutScreen checkoutScreen;
     public PaymentScreen paymentScreen;
@@ -72,10 +71,6 @@ public class PageObjectManager
         return productsListingScreen = new ProductsListingScreen(driver);
     }
 
-    public HandleNewWindowOnLaunch getHandleNewWindowOnLaunch()
-    {
-        return handleNewWindowOnLaunch= new HandleNewWindowOnLaunch((driver));
-    }
 
     public CartPage getCartPage()
     {

@@ -14,7 +14,6 @@ public class AddToCart
 {
     public ContextSetUp contextSetUp;
     public HomePage homePage;
-    public HandleNewWindowOnLaunch handleNewWindowOnLaunch;
     public ProductsListingScreen productsListingScreen;
     public CartPage cartPage;
     public ProductDetailsScreen productDetailsScreen;
@@ -23,16 +22,10 @@ public class AddToCart
       this.contextSetUp = contextSetUp;
       productsListingScreen = contextSetUp.pageObjectManager.getProductsListingScreen();
       homePage= contextSetUp.pageObjectManager.getHomePage();
-      handleNewWindowOnLaunch= contextSetUp.pageObjectManager.getHandleNewWindowOnLaunch();
       cartPage= contextSetUp.pageObjectManager.getCartPage();
       productDetailsScreen= contextSetUp.pageObjectManager.getProductDetailsScreen();
     }
 
-    @When("I handle ads on browser")
-    public void handleWindowsFromAdBlocker() {
-       handleNewWindowOnLaunch.setParentWindow();
-       LoggerHelper.logInfo("Navigated to parent window after installing");
-    }
 
     @And("I Hover over first product")
     public void mouseHoverAndClickOnFirstProduct()

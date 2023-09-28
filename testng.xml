@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="local_parallel">
+    <test name="chromeTest">
+        <classes>
+            <class name="cucumbeRunners.TestAutomation"></class>
+        </classes>
+
+    </test>
+
+</suite>

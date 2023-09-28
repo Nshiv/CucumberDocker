@@ -1,6 +1,6 @@
 Feature:  Test cases and Management
 
-  @smok
+  @wip
   Scenario: Verify TestCase page on screen
     Then I Verify that home page is visible successfully with title "Automation Exercise"
     And I  Click on Test Cases button

@@ -1,6 +1,5 @@
 Feature: Add products to cart
 
-  Background:I handle ads on browser
   @smoke
   Scenario: Verify add to cart flow for multiple products
     Then I verify that homepage Title is "Automation Exercise" displays on screen
