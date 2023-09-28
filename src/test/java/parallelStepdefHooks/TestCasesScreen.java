@@ -1,4 +1,4 @@
-package stepDefinitions;
+package parallelStepdefHooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -7,8 +7,6 @@ import org.testng.Assert;
 import pageObjects.HomePage;
 import pageObjects.TestCasesPage;
 import utilities.ContextSetUp;
-
-import java.util.logging.Logger;
 
 public class TestCasesScreen
 {

@@ -1,4 +1,4 @@
-package stepDefinitions;
+package parallelStepdefHooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -6,7 +6,6 @@ import logManager.LoggerHelper;
 import org.testng.Assert;
 import pageObjects.HomePage;
 import utilities.ContextSetUp;
-import utilities.GenericUtils;
 
 public class Subscription
 {

@@ -1,14 +1,12 @@
-package stepDefinitions;
+package parallelStepdefHooks;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import logManager.LoggerHelper;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 import pageObjects.*;
 import utilities.ContextSetUp;
 import java.util.List;

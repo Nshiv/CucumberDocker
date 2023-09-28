@@ -14,17 +14,12 @@ public class TestBase {
 
     public WebDriver driver;
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
-    public synchronized WebDriver webDriverManager() throws IOException {
-
+    public synchronized WebDriver webDriverManager(String browser) throws IOException {
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/global.properties");
         Properties prop = new Properties();
         prop.load(fis);
         String platform = prop.getProperty("remote");
-        String hubURL = prop.getProperty("hubURL");
-        String browser_prop = prop.getProperty("browser");
-        String browser_maven = System.getProperty("browser");
-        String browser = browser_maven != null ? browser_maven:browser_prop;
-        String project_url = prop.getProperty("url");
+        //String browser = browser_maven != null ? browser_maven:browser_prop;
             if (platform.equalsIgnoreCase("no"))
             {
                 if (browser.trim().equalsIgnoreCase("chrome"))
@@ -46,12 +41,6 @@ public class TestBase {
                     tlDriver.set(new FirefoxDriver());
                 }
 
-                if(!(getDriver()==null))
-                {
-                    getDriver().manage().window().maximize();
-                    getDriver().get(project_url);
-                    getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                }
             }return getDriver();
     }
 
@@ -60,7 +49,7 @@ public class TestBase {
        return tlDriver.get();
     }
 
-    public  synchronized void quitDriver()
+    public static synchronized void quitDriver()
     {
         WebDriver driver = tlDriver.get();
         if (driver != null) {

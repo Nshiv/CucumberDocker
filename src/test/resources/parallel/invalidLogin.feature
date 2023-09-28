@@ -1,7 +1,7 @@
 Feature: User invalid login
 
-  @smoke
-  Scenario:
+  @smoke@wip
+  Scenario:Verify Invalid login with correct error message on screen
     Then I verify redirected homepage Title is "Automation Exercise" is present
     And I click on Sign-in button
     Then I verify "Login to your account" is visible on navigated screen

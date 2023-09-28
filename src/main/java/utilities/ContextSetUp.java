@@ -15,9 +15,9 @@ public class ContextSetUp
     public ContextSetUp() throws IOException
     {
         this.testBase = new TestBase();
-        this.pageObjectManager=new PageObjectManager(testBase.webDriverManager());
-        this.genericUtils = new GenericUtils(testBase.webDriverManager());
-        this.elementsUtilities = new ElementsUtilities(testBase.webDriverManager());
+        this.pageObjectManager=new PageObjectManager(testBase.getDriver());
+        this.genericUtils = new GenericUtils(testBase.getDriver());
+        this.elementsUtilities = new ElementsUtilities(testBase.getDriver());
 
     }
 }

@@ -1,359 +1,71 @@
-23:38:54.509 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:39:18.889 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:39:48.400 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\cucumberDocker\testng.xml
-
-23:49:28.962 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:49:29.047 [main] INFO  logManager.LoggerHelper - clicked on products button
-23:49:49.167 [main] ERROR logManager.LoggerHelper - Issue with the Locator >>Proxy element for: DefaultElementLocator 'By.xpath: //h2[contains(.,'All Products')]'>>no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(.,'All Products')]"}
+17:12:05.789 [main] INFO  logManager.LoggerHelper - Clicked on confirm order
+17:12:25.874 [main] ERROR logManager.LoggerHelper - Issues with checking visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[text()='Congratulations! Your order has been confirmed!']': no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Congratulations! Your order has been confirmed!']"}
   (Session info: chrome=116.0.5845.96)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.12.0', revision: '249f2a7d1b*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [21e125923638455a3f33503383a72ab4, findElement {using=xpath, value=//h2[contains(.,'All Products')]}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:10775}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:10775/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 21e125923638455a3f33503383a72ab4
-23:53:56.290 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:53:56.363 [main] INFO  logManager.LoggerHelper - clicked on products button
-23:54:14.316 [main] ERROR logManager.LoggerHelper - Issue with the Locator >>Proxy element for: DefaultElementLocator 'By.xpath: //h2[contains(.,'All Products')]'>>no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(.,'All Products')]"}
+Command: [3bc288269319f63aab4e2d5244279f00, findElement {using=xpath, value=//p[text()='Congratulations! Your order has been confirmed!']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1164/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3bc288269319f63aab4e2d5244279f00
+17:12:35.889 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+17:12:41.634 [main] INFO  logManager.LoggerHelper - clicked on products button
+17:12:41.655 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+17:12:41.724 [main] INFO  logManager.LoggerHelper - clicked on first product to view product details
+17:13:07.534 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+17:13:09.565 [main] INFO  logManager.LoggerHelper - clicked on products button
+17:13:09.611 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+17:13:15.662 [main] INFO  logManager.LoggerHelper - Browser launched and navigated to Url
+17:13:15.662 [main] INFO  logManager.LoggerHelper - Starting page title assertion
+17:13:15.669 [main] INFO  logManager.LoggerHelper - Assertion completed
+17:13:16.455 [main] INFO  logManager.LoggerHelper - Signup b-utton is clicked.
+17:13:16.456 [main] INFO  logManager.LoggerHelper - Assertion for validation texts on signup screen is started
+17:13:16.481 [main] INFO  logManager.LoggerHelper - Assertion completed
+17:13:16.481 [main] INFO  logManager.LoggerHelper - Starting enter email and email for sign up
+17:13:16.647 [main] INFO  logManager.LoggerHelper - Details entered on screen
+17:13:17.466 [main] INFO  logManager.LoggerHelper - Clicked on signup button
+17:13:17.467 [main] INFO  logManager.LoggerHelper - Assertion about to start for verifying screentexts on signup form screen
+17:13:32.895 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+17:13:40.740 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+17:13:41.071 [main] ERROR logManager.LoggerHelper - Assertion Failed while verifying success message on submit subscription expected [subscription] but found [you have been successfully subscribed!]
+17:13:45.882 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+17:13:46.962 [main] ERROR logManager.LoggerHelper - Assertion Failed while verifying success message on submit subscription expected [subscription] but found [you have been successfully subscribed!]
+17:13:51.560 [main] INFO  logManager.LoggerHelper - Title verified
+17:13:53.125 [main] INFO  logManager.LoggerHelper - Test case button clicked
+17:13:53.166 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+21:21:32.997 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+21:21:41.348 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+21:21:41.552 [main] INFO  logManager.LoggerHelper - clicked on products button
+21:21:53.392 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+21:22:02.232 [main] INFO  logManager.LoggerHelper - Title verified
+21:22:02.458 [main] INFO  logManager.LoggerHelper - Test case button clicked
+21:22:22.664 [main] ERROR logManager.LoggerHelper - Issue with the LOcator Proxy element for: DefaultElementLocator 'By.xpath: //b[text()='Test Cases']'  no such element: Unable to locate element: {"method":"xpath","selector":"//b[text()='Test Cases']"}
   (Session info: chrome=116.0.5845.96)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.12.0', revision: '249f2a7d1b*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d22a608d32992ae876cfd7127508db64, findElement {using=xpath, value=//h2[contains(.,'All Products')]}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:11569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:11569/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d22a608d32992ae876cfd7127508db64
-23:54:36.513 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+Command: [8e514c9261752d3918f4f79bdfd6a0da, findElement {using=xpath, value=//b[text()='Test Cases']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:7536}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:7536/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8e514c9261752d3918f4f79bdfd6a0da
+21:31:18.545 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
 
-23:56:00.732 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:56:00.947 [main] INFO  logManager.LoggerHelper - clicked on products button
-23:56:21.065 [main] ERROR logManager.LoggerHelper - Issue with the Locator >>Proxy element for: DefaultElementLocator 'By.xpath: //h2[contains(.,'All Products')]'>>no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(.,'All Products')]"}
-  (Session info: chrome=116.0.5845.96)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cf8ea66ff2f9b5e7c2e0588358fbf6aa, findElement {using=xpath, value=//h2[contains(.,'All Products')]}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:11957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:11957/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cf8ea66ff2f9b5e7c2e0588358fbf6aa
-23:58:25.336 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:58:25.414 [main] INFO  logManager.LoggerHelper - clicked on products button
-23:59:51.432 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:59:51.504 [main] INFO  logManager.LoggerHelper - clicked on products button
-23:59:55.087 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-00:39:32.305 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-00:39:32.418 [main] INFO  logManager.LoggerHelper - clicked on products button
-00:40:47.994 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-00:40:48.108 [main] INFO  logManager.LoggerHelper - clicked on products button
-00:40:54.884 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:22:27.168 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+21:31:27.123 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+21:31:30.248 [main] INFO  logManager.LoggerHelper - clicked on products button
+21:31:30.368 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+21:31:38.649 [main] INFO  logManager.LoggerHelper - Title verified
+21:31:39.888 [main] INFO  logManager.LoggerHelper - Test case button clicked
+21:31:40.016 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+21:32:56.961 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
 
-12:22:35.097 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:22:35.170 [main] INFO  logManager.LoggerHelper - clicked on products button
-12:22:38.488 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:23:04.200 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:23:16.523 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:23:16.570 [main] INFO  logManager.LoggerHelper - clicked on products button
-12:23:16.594 [main] ERROR logManager.LoggerHelper - Issue with the Locator >>Proxy element for: DefaultElementLocator 'By.xpath: //h2[contains(.,'All Products')]'>>Unable to locate element: //h2[contains(.,'All Products')]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [af200f06-e233-4666-bb02-a5fb96459f05, findElement {using=xpath, value=//h2[contains(.,'All Products')]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 117.0, moz:accessibilityChecks: false, moz:buildID: 20230824132758, moz:debuggerAddress: 127.0.0.1:12543, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 6080, moz:profile: C:\Users\ASUS1\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12543/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: af200f06-e233-4666-bb02-a5fb96459f05
-12:23:26.418 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:23:36.088 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:23:36.134 [main] INFO  logManager.LoggerHelper - clicked on products button
-12:23:36.165 [main] ERROR logManager.LoggerHelper - Issue with the Locator >>Proxy element for: DefaultElementLocator 'By.xpath: //h2[contains(.,'All Products')]'>>Unable to locate element: //h2[contains(.,'All Products')]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [5c8899a6-4a8c-48c3-b1f4-835a6b675db3, findElement {using=xpath, value=//h2[contains(.,'All Products')]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 117.0, moz:accessibilityChecks: false, moz:buildID: 20230824132758, moz:debuggerAddress: 127.0.0.1:37524, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19468, moz:profile: C:\Users\ASUS1\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37524/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5c8899a6-4a8c-48c3-b1f4-835a6b675db3
-12:24:11.578 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:24:19.474 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:24:19.528 [main] INFO  logManager.LoggerHelper - clicked on products button
-12:24:21.680 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:24:37.995 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:25:26.652 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:25:32.390 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:25:32.467 [main] INFO  logManager.LoggerHelper - clicked on products button
-12:25:37.282 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:27:42.735 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:27:49.417 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:27:49.487 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - clicked on products button
-12:27:54.744 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:28:54.692 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:29:00.687 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:29:02.449 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:29:02.553 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - clicked on products button
-12:29:03.642 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handling started
-12:29:03.859 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handleled
-12:29:04.543 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-12:29:07.220 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:30:16.986 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:30:24.010 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:30:25.772 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:30:25.898 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-12:30:29.999 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:30:30.272 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handling started
-12:30:30.310 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handleled
-12:30:30.835 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-12:43:14.337 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:43:21.255 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:43:22.774 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:43:22.913 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-12:43:25.574 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handling started
-12:43:25.598 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handleled
-12:43:26.413 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-12:43:27.815 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:46:03.271 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:46:11.707 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:46:12.031 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:46:12.144 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-12:46:16.446 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:46:16.564 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handling started
-12:46:16.601 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handleled
-12:46:17.410 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-12:46:51.294 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-12:47:05.713 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:47:06.656 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-12:47:08.885 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handling started
-12:47:08.944 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handleled
-12:47:09.837 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-12:47:10.689 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-12:47:10.729 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for homepage
-12:51:37.966 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-13:00:38.453 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-15:35:16.720 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-15:38:08.713 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-15:38:17.397 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-15:38:17.484 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-15:38:17.688 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-15:38:20.208 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handling started
-15:38:20.215 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handleled
-15:38:20.293 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-15:40:29.107 [TestNG-PoolService-2] ERROR logManager.LoggerHelper - Issue with the Locator >>[[ChromeDriver: chrome on windows (70949f885159756b71203b3c73e28f65)] -> xpath: //h2[contains(.,'All Products')]]>>no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(.,'All Products')]"}
-  (Session info: chrome=116.0.5845.96)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [70949f885159756b71203b3c73e28f65, findElement {using=xpath, value=//h2[contains(.,'All Products')]}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4001}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4001/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 70949f885159756b71203b3c73e28f65
-16:35:03.124 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-16:36:41.811 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-16:37:12.886 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-16:46:07.106 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-16:49:08.781 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-16:51:26.761 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-16:55:56.802 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-17:04:40.316 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-17:07:05.976 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-17:09:59.815 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:09:36.866 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:10:56.188 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:13:47.305 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:16:18.578 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:16:40.543 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:17:59.376 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:18:33.320 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-19:20:27.609 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-22:16:12.051 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-22:26:33.638 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-22:28:04.007 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-22:29:57.480 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-22:30:44.030 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-22:34:24.408 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-22:37:58.207 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:01:52.383 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:06:42.697 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:11:20.776 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:12:38.308 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:15:19.689 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:15:58.281 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:16:12.246 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:16:12.508 [main] INFO  logManager.LoggerHelper - clicked on products button
-23:16:17.220 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-23:23:26.999 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:23:38.204 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:23:38.447 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - clicked on products button
-23:23:42.797 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for homepage
-23:24:08.700 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:26:20.301 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:26:27.942 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:26:28.157 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - clicked on products button
-23:26:32.655 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for homepage
-23:26:53.339 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:27:05.510 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:27:05.655 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - clicked on products button
-23:27:07.940 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for homepage
-23:27:29.998 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-23:32:24.891 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\cucumberDocker\testng.xml
-
-23:32:36.238 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:32:36.384 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - clicked on products button
-23:32:38.880 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for homepage
-23:33:39.026 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\cucumberDocker\testng.xml
-
-23:33:48.726 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:33:51.856 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:33:53.147 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handling started
-23:33:53.170 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Alert Handleled
-23:33:53.552 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-23:33:55.992 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-23:33:56.042 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for homepage
-23:34:20.399 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\cucumberDocker\testng.xml
-
-23:34:27.521 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:34:31.830 [main] INFO  logManager.LoggerHelper - Issue with the locator element click intercepted: Element <input type="submit" data-qa="submit-button" name="submit" class="btn btn-primary pull-left submit_form" value="Submit"> is not clickable at point (237, 640). Other element would receive the click: <div id="aswift_5_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;">...</div>
-  (Session info: chrome=116.0.5845.96)
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a3bfd039d1e102440a3e42f8e7b4af0f, clickElement {id=A58142E61C19DC3814EDD0C47C6FD706_element_91}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:13286}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:13286/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a3bfd039d1e102440a3e42f8e7b4af0f)] -> name: submit]
-Session ID: a3bfd039d1e102440a3e42f8e7b4af0f
-23:34:31.831 [main] INFO  logManager.LoggerHelper - Alert Handling started
-23:34:31.842 [main] ERROR logManager.LoggerHelper - No alert present no such alert
-  (Session info: chrome=116.0.5845.96)
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a3bfd039d1e102440a3e42f8e7b4af0f, getAlertText {}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:13286}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:13286/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a3bfd039d1e102440a3e42f8e7b4af0f
-23:34:31.842 [main] INFO  logManager.LoggerHelper - Alert Handleled
-23:34:31.919 [main] ERROR logManager.LoggerHelper - Assertion failed on Verifying Texts on upload successexpected [] but found [success! your details have been submitted successfully.]
-23:34:41.981 [main] INFO  logManager.LoggerHelper - Issue with the locator no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='btn btn-success']"}
-  (Session info: chrome=116.0.5845.96)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a3bfd039d1e102440a3e42f8e7b4af0f, findElement {using=xpath, value=//a[@class='btn btn-success']}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:13286}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:13286/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a3bfd039d1e102440a3e42f8e7b4af0f
-23:34:41.998 [main] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
-23:34:42.377 [AsyncHttpClient-1-4] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
+21:33:08.286 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+21:33:11.921 [main] INFO  logManager.LoggerHelper - clicked on products button
+21:33:12.005 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+21:33:14.409 [AsyncHttpClient-1-4] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
 java.net.SocketException: Connection reset
 	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[?:?]
 	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[?:?]
@@ -369,103 +81,199 @@ java.net.SocketException: Connection reset
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.96.Final.jar:4.1.96.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.96.Final.jar:4.1.96.Final]
 	at java.lang.Thread.run(Thread.java:833) [?:?]
-23:35:01.957 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-23:35:05.986 [main] INFO  logManager.LoggerHelper - clicked on products button
-23:35:06.074 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-00:00:40.956 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+21:33:19.267 [main] INFO  logManager.LoggerHelper - Title verified
+21:33:20.515 [main] INFO  logManager.LoggerHelper - Test case button clicked
+21:33:20.941 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+21:35:50.535 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
 
-00:02:37.414 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+21:36:00.195 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+21:36:00.506 [main] INFO  logManager.LoggerHelper - clicked on products button
+21:36:04.535 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+21:36:12.349 [main] INFO  logManager.LoggerHelper - Title verified
+21:36:12.565 [main] INFO  logManager.LoggerHelper - Test case button clicked
+21:36:16.388 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+21:39:43.334 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
 
-00:03:02.668 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-00:03:03.723 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-00:03:36.135 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\cucumberDocker\testng.xml
+21:39:50.642 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+21:39:50.914 [main] INFO  logManager.LoggerHelper - clicked on products button
+21:39:58.527 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+21:40:06.488 [main] INFO  logManager.LoggerHelper - Title verified
+21:40:06.718 [main] INFO  logManager.LoggerHelper - Test case button clicked
+21:40:10.466 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+21:42:53.261 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
 
-00:04:37.561 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\cucumberDocker\testng.xml
+21:43:01.480 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+21:43:01.778 [main] INFO  logManager.LoggerHelper - clicked on products button
+21:43:05.815 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+21:43:13.907 [main] INFO  logManager.LoggerHelper - Title verified
+21:43:14.147 [main] INFO  logManager.LoggerHelper - Test case button clicked
+21:43:17.031 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+21:48:52.007 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
 
-00:04:55.019 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-00:04:55.199 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - clicked on products button
-00:06:32.272 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  D:\cucumberDocker\testng.xml
+22:05:33.387 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
 
-00:06:49.601 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-00:06:49.709 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - clicked on products button
-00:07:01.042 [TestNG-PoolService-0] ERROR logManager.LoggerHelper - Issue with the Locator >>[[ChromeDriver: chrome on windows (e3fcdc5f70121a12a4d4789c4a372f19)] -> xpath: //h2[contains(.,'All Products')]]>>no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(.,'All Products')]"}
+22:05:43.772 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:05:43.923 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - clicked on products button
+22:05:45.257 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Title verified
+22:05:45.376 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Test case button clicked
+22:05:48.154 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for homepage
+22:05:50.281 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+22:07:41.406 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+22:07:49.852 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:07:50.115 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - clicked on products button
+22:07:54.376 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for homepage
+22:07:59.335 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Title verified
+22:07:59.499 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Test case button clicked
+22:08:02.095 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+22:38:25.281 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+22:38:25.758 [main] WARN  org.testng.internal.Utils - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
+22:38:59.071 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+22:39:08.537 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Title verified
+22:39:08.738 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:39:08.791 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Test case button clicked
+22:39:08.970 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - clicked on products button
+22:39:13.354 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+22:39:20.011 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for homepage
+22:40:43.850 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+22:40:51.222 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:40:51.331 [main] INFO  logManager.LoggerHelper - clicked on products button
+22:40:51.336 [main] INFO  logManager.LoggerHelper - Waiting for element to view
+22:40:51.411 [main] INFO  logManager.LoggerHelper - Scroll to view started
+22:40:51.437 [main] INFO  logManager.LoggerHelper - Scrolling done
+22:40:51.724 [main] INFO  logManager.LoggerHelper - Mouse hover done
+22:41:13.562 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:41:13.824 [main] INFO  logManager.LoggerHelper - Clicked on view product button
+22:41:15.821 [main] INFO  logManager.LoggerHelper - Assertion Complete to verify product details screen
+22:41:16.378 [main] INFO  logManager.LoggerHelper - Increased product quantity to 4
+22:41:16.479 [main] INFO  logManager.LoggerHelper - Cliked on add to Cart button
+22:41:19.287 [main] INFO  logManager.LoggerHelper - Clicked on view cart button
+22:41:19.351 [main] INFO  logManager.LoggerHelper - Assertion Passed for verifying updated quantity
+22:41:25.495 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:41:29.586 [main] INFO  logManager.LoggerHelper - Issue with the locator element click intercepted: Element <input type="submit" data-qa="submit-button" name="submit" class="btn btn-primary pull-left submit_form" value="Submit"> is not clickable at point (237, 640). Other element would receive the click: <div id="aswift_4_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;">...</div>
+  (Session info: chrome=116.0.5845.96)
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef1eb1952effc1772d8e6be6a62e2211, clickElement {id=D4E5689C4A3C1DD019CC47B07196FD21_element_168}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4022/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ef1eb1952effc1772d8e6be6a62e2211)] -> name: submit]
+Session ID: ef1eb1952effc1772d8e6be6a62e2211
+22:41:29.587 [main] INFO  logManager.LoggerHelper - Alert Handling started
+22:41:29.592 [main] ERROR logManager.LoggerHelper - No alert present no such alert
+  (Session info: chrome=116.0.5845.96)
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef1eb1952effc1772d8e6be6a62e2211, getAlertText {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4022/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef1eb1952effc1772d8e6be6a62e2211
+22:41:29.593 [main] INFO  logManager.LoggerHelper - Alert Handleled
+22:41:29.630 [main] ERROR logManager.LoggerHelper - Assertion failed on Verifying Texts on upload successexpected [] but found [success! your details have been submitted successfully.]
+22:41:39.686 [main] INFO  logManager.LoggerHelper - Issue with the locator no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='btn btn-success']"}
   (Session info: chrome=116.0.5845.96)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.12.0', revision: '249f2a7d1b*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e3fcdc5f70121a12a4d4789c4a372f19, findElement {using=xpath, value=//h2[contains(.,'All Products')]}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4935}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4935/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e3fcdc5f70121a12a4d4789c4a372f19
-00:07:16.347 [AsyncHttpClient-1-16] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
-java.net.SocketException: Connection reset
-	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[?:?]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[?:?]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:254) ~[netty-buffer-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at java.lang.Thread.run(Thread.java:833) [?:?]
-00:08:04.729 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-00:08:30.917 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-00:08:57.376 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-00:08:57.462 [main] INFO  logManager.LoggerHelper - clicked on products button
-00:12:05.456 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-00:17:36.950 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-00:18:02.491 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
-00:18:02.580 [main] INFO  logManager.LoggerHelper - clicked on products button
-00:18:05.831 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
-00:18:07.694 [AsyncHttpClient-1-10] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
-java.net.SocketException: Connection reset
-	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[?:?]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[?:?]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:254) ~[netty-buffer-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at java.lang.Thread.run(Thread.java:833) [?:?]
-00:19:47.831 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-00:20:05.714 [main] INFO  logManager.LoggerHelper - Title verified
-00:20:05.771 [main] INFO  logManager.LoggerHelper - Test case button clicked
-00:20:25.843 [main] ERROR logManager.LoggerHelper - Issue with the LOcator Proxy element for: DefaultElementLocator 'By.xpath: //b[text()='Test Cases']'  no such element: Unable to locate element: {"method":"xpath","selector":"//b[text()='Test Cases']"}
+Command: [ef1eb1952effc1772d8e6be6a62e2211, findElement {using=xpath, value=//a[@class='btn btn-success']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4022/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef1eb1952effc1772d8e6be6a62e2211
+22:41:39.702 [main] ERROR logManager.LoggerHelper - Assertion failed for verifying homepage navigation after contact us formexpected [automation exercise - contact us] but found [automation exercise]
+22:41:54.809 [main] INFO  logManager.LoggerHelper - Verified homepage title
+22:41:55.885 [main] INFO  logManager.LoggerHelper - Clicked on signup link
+22:41:55.960 [main] INFO  logManager.LoggerHelper - Validated texts for login on login screen
+22:41:56.666 [main] INFO  logManager.LoggerHelper - Email and password provided
+22:41:59.868 [main] INFO  logManager.LoggerHelper - Clicked on login button
+22:42:00.077 [main] INFO  logManager.LoggerHelper - Verified username of loggedin User
+22:42:01.509 [main] INFO  logManager.LoggerHelper - clicked on logout button
+22:42:01.529 [main] INFO  logManager.LoggerHelper - Verified navigation of login screen again
+22:42:15.528 [main] INFO  logManager.LoggerHelper - Waiting for element to view
+22:42:15.691 [main] INFO  logManager.LoggerHelper - Scroll to view started
+22:42:15.746 [main] INFO  logManager.LoggerHelper - Scrolling done
+22:42:15.973 [main] INFO  logManager.LoggerHelper - Mouse hover done
+22:42:16.314 [main] INFO  logManager.LoggerHelper - Add to cart clicked
+22:42:18.986 [main] INFO  logManager.LoggerHelper - Clicked on view cart
+22:42:21.396 [main] INFO  logManager.LoggerHelper - Clicked on checkout button on cart details screen
+22:42:21.647 [main] INFO  logManager.LoggerHelper - Comment provided in comment field
+22:42:21.756 [main] INFO  logManager.LoggerHelper - PLace order clicked
+22:42:25.585 [main] INFO  logManager.LoggerHelper - All the Payment details completely submitted
+22:42:26.719 [main] ERROR logManager.LoggerHelper - Issues with clicking on [[ChromeDriver: chrome on windows (a70d6d7d41a73706ea93a73b62c7e2bd)] -> id: submit]: element click intercepted: Element <button class="form-control btn btn-primary submit-button" data-qa="pay-button" id="submit" type="submit">...</button> is not clickable at point (759, 565). Other element would receive the click: <iframe id="aswift_1" name="aswift_1" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20230925/r20110914/zrt_lookup.html?fsb=1#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=2&amp;uci=a!2&amp;btvi=1" data-google-container-id="a!2" data-google-query-id="CKfhk8vmzYEDFUFeDwIdhCANFQ" data-load-complete="true"></iframe>
+  (Session info: chrome=116.0.5845.96)
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a70d6d7d41a73706ea93a73b62c7e2bd, clickElement {id=F53799F71D2E36B8EC65862501902FA6_element_169}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4211}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4211/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a70d6d7d41a73706ea93a73b62c7e2bd)] -> id: submit]
+Session ID: a70d6d7d41a73706ea93a73b62c7e2bd
+22:42:26.720 [main] INFO  logManager.LoggerHelper - Clicked on confirm order
+22:42:46.833 [main] ERROR logManager.LoggerHelper - Issues with checking visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[text()='Congratulations! Your order has been confirmed!']': no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Congratulations! Your order has been confirmed!']"}
   (Session info: chrome=116.0.5845.96)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.12.0', revision: '249f2a7d1b*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eaebde246bb2d4d4f8dc5c05bd670e04, findElement {using=xpath, value=//b[text()='Test Cases']}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:6880}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:6880/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eaebde246bb2d4d4f8dc5c05bd670e04
-00:20:26.015 [AsyncHttpClient-1-10] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
+Command: [a70d6d7d41a73706ea93a73b62c7e2bd, findElement {using=xpath, value=//p[text()='Congratulations! Your order has been confirmed!']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\ASUS1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4211}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4211/devtool..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a70d6d7d41a73706ea93a73b62c7e2bd
+22:42:54.075 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+22:42:54.288 [main] INFO  logManager.LoggerHelper - clicked on products button
+22:42:59.231 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+22:42:59.644 [main] INFO  logManager.LoggerHelper - clicked on first product to view product details
+22:43:27.136 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:43:27.339 [main] INFO  logManager.LoggerHelper - clicked on products button
+22:43:31.411 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+22:43:39.543 [main] INFO  logManager.LoggerHelper - Browser launched and navigated to Url
+22:43:39.544 [main] INFO  logManager.LoggerHelper - Starting page title assertion
+22:43:39.561 [main] INFO  logManager.LoggerHelper - Assertion completed
+22:43:40.700 [main] INFO  logManager.LoggerHelper - Signup b-utton is clicked.
+22:43:40.701 [main] INFO  logManager.LoggerHelper - Assertion for validation texts on signup screen is started
+22:43:41.013 [main] INFO  logManager.LoggerHelper - Assertion completed
+22:43:41.014 [main] INFO  logManager.LoggerHelper - Starting enter email and email for sign up
+22:43:41.286 [main] INFO  logManager.LoggerHelper - Details entered on screen
+22:43:43.018 [main] INFO  logManager.LoggerHelper - Clicked on signup button
+22:43:43.018 [main] INFO  logManager.LoggerHelper - Assertion about to start for verifying screentexts on signup form screen
+22:44:00.146 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:44:10.582 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:44:11.461 [main] ERROR logManager.LoggerHelper - Assertion Failed while verifying success message on submit subscription expected [subscription] but found [you have been successfully subscribed!]
+22:44:17.217 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:44:19.090 [main] ERROR logManager.LoggerHelper - Assertion Failed while verifying success message on submit subscription expected [subscription] but found [you have been successfully subscribed!]
+22:44:25.200 [main] INFO  logManager.LoggerHelper - Title verified
+22:44:27.362 [main] INFO  logManager.LoggerHelper - Test case button clicked
+22:44:27.436 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+22:48:24.805 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+22:48:49.331 [main] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:48:49.469 [main] INFO  logManager.LoggerHelper - clicked on products button
+22:48:53.279 [main] INFO  logManager.LoggerHelper - Assertion completed for homepage
+22:49:01.175 [main] INFO  logManager.LoggerHelper - Title verified
+22:49:02.264 [main] INFO  logManager.LoggerHelper - Test case button clicked
+22:49:02.660 [main] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+22:50:08.816 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+22:50:09.363 [main] WARN  org.testng.internal.Utils - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
+22:50:39.883 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+22:50:49.006 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Title verified
+22:50:51.075 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Test case button clicked
+22:50:51.130 [TestNG-PoolService-2] INFO  logManager.LoggerHelper - Verified assertion for Test case screen redirection
+22:50:51.374 [AsyncHttpClient-1-8] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
 java.net.SocketException: Connection reset
 	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[?:?]
 	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[?:?]
@@ -481,3 +289,6 @@ java.net.SocketException: Connection reset
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.96.Final.jar:4.1.96.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.96.Final.jar:4.1.96.Final]
 	at java.lang.Thread.run(Thread.java:833) [?:?]
+22:50:52.082 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for verifying Title of the homepage
+22:50:58.173 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - clicked on products button
+22:50:58.303 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - Assertion completed for homepage

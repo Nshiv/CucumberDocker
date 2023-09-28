@@ -1,4 +1,4 @@
-package stepDefinitions;
+package parallelStepdefHooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -8,7 +8,6 @@ import pageObjects.HomePage;
 import pageObjects.ProductsListingScreen;
 import utilities.ContextSetUp;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SearchProduct
@@ -41,7 +40,7 @@ public class SearchProduct
         for(WebElement titleElement : titles)
         {
             String actualTitle = titleElement.getText();
-            System.out.println(actualTitle);
+            //System.out.println(actualTitle);
             if(!actualTitle.contains(expectedTitle))
             {
                 flag=false;

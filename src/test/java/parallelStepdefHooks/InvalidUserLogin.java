@@ -1,11 +1,9 @@
-package stepDefinitions;
+package parallelStepdefHooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
-import pageObjects.DeletedAccountScreen;
 import pageObjects.HomePage;
-import pageObjects.LoggedInScreen;
 import pageObjects.LoginScreen;
 import utilities.ContextSetUp;
 
@@ -28,7 +26,7 @@ public class InvalidUserLogin
         Assert.assertEquals(expected.toLowerCase().trim(),homePage.getpageTitle().trim().toLowerCase());
     }
     @And("I click on Sign-in button")
-    public void clickOnSigninButton()
+    public void clickOnSignInButton()
     {
         homePage.clickOnLogin_SignupLink();
     }
@@ -49,7 +47,7 @@ public class InvalidUserLogin
         loginScreen.clickOnLoginButton();
     }
     @Then("I verify corresponding error message on screen")
-    public void verifyErrorMessageOnSCreen()
+    public void verifyErrorMessageOnScreen()
     {
         String errorMessage = "Your email or password is incorrect!".toLowerCase();
         Assert.assertEquals(errorMessage,loginScreen.getErrorMessageOnIncorrectLoginPassword().trim().toLowerCase());

@@ -1,4 +1,4 @@
-package stepDefinitions;
+package parallelStepdefHooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
