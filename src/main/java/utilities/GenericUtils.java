@@ -27,27 +27,36 @@ public class GenericUtils
     }
     public void switchWindowToChild()
     {
-
-        String parentWindow = driver.getWindowHandle();
-        Set<String> windowHandles = driver.getWindowHandles();
-        for (String windowHandle : windowHandles) {
-            if (!windowHandle.equals(parentWindow)) {
-                driver.switchTo().window(windowHandle);
-                break;
+        try {
+            String parentWindow = driver.getWindowHandle();
+            Set<String> windowHandles = driver.getWindowHandles();
+            for (String windowHandle : windowHandles) {
+                if (!windowHandle.equals(parentWindow)) {
+                    driver.switchTo().window(windowHandle);
+                    break;
+                }
             }
-
+        }catch (NoSuchWindowException e)
+        {
+            LoggerHelper.logError("Issue in between switching to child window>>>"+e.getMessage());
         }
+
     }
 
     public void switchToParentWindow(String parentWindow)
     {
-        driver.switchTo().window(parentWindow);
+        try {
+            driver.switchTo().window(parentWindow);
+        }catch (NoSuchWindowException e)
+        {
+            LoggerHelper.logError("Issue in switching back to parent window>>>"+e.getMessage());
+        }
+
     }
 
 
     public void acceptAlert()
     {
-
         try {
             Alert alert = driver.switchTo().alert();
             alert.accept();
@@ -58,12 +67,24 @@ public class GenericUtils
     }
 
     public void scrollIntoView(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        }catch (ElementNotInteractableException | NoSuchElementException e)
+        {
+            LoggerHelper.logError("Element to perform hover actions has some error >>"+e.getMessage());
+        }
+
     }
 
     public void scrollIntoViewAndClick(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        element.click();
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            element.click();
+        }catch (NoSuchElementException e)
+        {
+            LoggerHelper.logError("Issue in locator >>"+element+" >>>"+e.getMessage());
+        }
+
     }
 
    /* public void mouseHoverAndClick(WebElement element)
@@ -72,24 +93,46 @@ public class GenericUtils
     }*/
 
     public void mouseHover(WebElement element)
-    {
-
+    {try {
         actions.moveToElement(element).perform();
+    }catch (ElementNotInteractableException | NoSuchElementException e)
+    {
+        LoggerHelper.logError("Error on hover on locator >>"+element+"   >>>"+e.getMessage());
+    }
+
     }
 
     public void clickElement(WebElement element)
     {
+        try {
+            actions.click(element).build().perform();
+    }catch (NoSuchElementException e)
+        {
+            LoggerHelper.logError("Error on peforming click on element >>>>"+element+" >>>"+e.getMessage());
+        }
 
-        actions.click(element).build().perform();
     }
     public void waitForElementToBeClickable(WebElement element, Duration timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, timeout);
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+        }catch (NoSuchElementException | ElementNotInteractableException | StaleElementReferenceException e)
+        {
+            LoggerHelper.logError("Unable to interact/locate element to click  >>>"+element+"  >>>"+e.getMessage());
+        }
+
     }
 
     public void waitForElementToBeVisible(WebElement element, Duration timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.visibilityOf(element));
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, timeout);
+            wait.until(ExpectedConditions.visibilityOf(element));
+        }catch (NoSuchElementException | ElementNotInteractableException | StaleElementReferenceException e)
+        {
+            LoggerHelper.logError("element is not visible  >>>"+element+"  >>>"+e.getMessage());
+        }
+
     }
 
 }

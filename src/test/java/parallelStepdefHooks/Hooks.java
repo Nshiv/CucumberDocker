@@ -26,21 +26,20 @@ public class Hooks
             properties = new Properties();
             properties.load(fis);
             testBase = new TestBase();
-            String hubURL = properties.getProperty("hubURL");
             project_url = properties.getProperty("url");
             browser_prop = properties.getProperty("browser");
         } catch (IOException e) {
             LoggerHelper.logError("Error in reading and fetching properties file values   >>" + e.getMessage());
         }
         try {
-            driver = testBase.webDriverManager(browser_prop);
+            this.driver = testBase.webDriverManager(browser_prop);
         } catch (WebDriverException | IOException e) {
-            LoggerHelper.logError("launch browser exceptions" + e.getMessage());
+            LoggerHelper.logException("launch browser exceptions" + e.getMessage(),e);
         }
 
         //driver.manage().window().maximize();
-        driver.get(project_url);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        this.driver.get(project_url);
+        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
 
@@ -55,7 +54,9 @@ public class Hooks
     @After(order = 2)
     public void quitBrowser() throws IOException
     {
-        driver.quit();
+        if (this.driver != null) {
+            this.driver.quit();
+        }
     }
 
    /* @After(order = 3)

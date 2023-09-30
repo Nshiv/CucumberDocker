@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="local_parallel">
-    <test name="chromeTest">
+    <test name="test" parallel="methods" thread-count="2">
         <classes>
-            <class name="cucumbeRunners.TestAutomation"></class>
+            <class name="parallelStepdefHooks.TestParallel"> </class>
         </classes>
 
     </test>

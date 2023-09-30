@@ -7,13 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ElementsUtilities;
 
 public class TestCasesPage {
     public WebDriver driver;
+    private ElementsUtilities elementsUtilities;
 
     public TestCasesPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        elementsUtilities= new ElementsUtilities(driver);
     }
 
     //Locators
@@ -28,13 +31,7 @@ public class TestCasesPage {
 
     public String getVerificationTexts()
     {
-        try {
-            return textVerificationOnTestCasesScreen.getText();
-        }catch (ElementNotInteractableException | NoSuchElementException e)
-        {
-            LoggerHelper.logError("Issue with the LOcator "+textVerificationOnTestCasesScreen+ "  "+e.getMessage());
-        }
-       return null;
+            return elementsUtilities.getTextsOfElement(textVerificationOnTestCasesScreen);
     }
 
 }

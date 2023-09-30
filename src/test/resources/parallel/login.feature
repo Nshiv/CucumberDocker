@@ -1,7 +1,7 @@
 Feature: User Login
 
-  @smoke
-  Scenario:
+  @smoke@wip
+  Scenario: Validate login
     Then I verify homepage Title is "Automation Exercise"
     And I click on Sign in button
     Then I verify "Login to your account" is visible

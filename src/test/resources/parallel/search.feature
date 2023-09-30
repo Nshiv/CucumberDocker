@@ -7,5 +7,5 @@ Feature: Search products
     Then I Verify navigation with "ALL PRODUCTS" texts present on product Listing screen
     And  I Enter "Sleeveless" in search input
     And I click on search button
-    And I Verify "ZZZZ" is present in product Titles
+    And I Verify "Sleeveless" is present in product Titles
 

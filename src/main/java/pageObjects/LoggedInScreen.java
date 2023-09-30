@@ -6,13 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ElementsUtilities;
 
 public class LoggedInScreen
 {
     public WebDriver driver;
+    private ElementsUtilities elementsUtilities;
     public LoggedInScreen(WebDriver driver)
     {
         this.driver=driver;
+        elementsUtilities= new ElementsUtilities(driver);
         PageFactory.initElements(driver,this);
     }
 
@@ -29,22 +32,16 @@ public class LoggedInScreen
 
     public void clickDeleteAccount()
     {
-        linkDeleteAccount.click();
+       elementsUtilities.elementClick(linkDeleteAccount);
     }
 
     public String getLoggedUserTexts()
     {
-        return loggedInUsername.getText();
+      return  elementsUtilities.getTextsOfElement(loggedInUsername);
     }
 
     public void clickOnLogout()
     {
-        try {
-            logoutLink.click();
-        }catch (NoSuchElementException e)
-        {
-            LoggerHelper.logException("Issue with logout link locator", e);
-        }
-
+        elementsUtilities.elementClick(logoutLink);
     }
 }

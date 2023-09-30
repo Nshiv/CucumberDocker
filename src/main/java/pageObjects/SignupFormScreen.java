@@ -5,14 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import utilities.ElementsUtilities;
 
 public class SignupFormScreen
 {
     public WebDriver driver;
+    private ElementsUtilities elementsUtilities;
     public SignupFormScreen(WebDriver driver)
     {
         this.driver= driver;
         PageFactory.initElements(driver,this);
+        elementsUtilities = new ElementsUtilities(driver);
     }
 
     //locators
@@ -90,17 +93,17 @@ public class SignupFormScreen
 
     public String getSignupTexts()
     {
-        return centerTextsonScreen.getText();
+        return elementsUtilities.getTextsOfElement(centerTextsonScreen);
     }
 
     public void clickMrRadioButton()
     {
-        genderRadiobutton.click();
+       elementsUtilities.elementClick(genderRadiobutton);
     }
 
     public void setPassword(String password)
     {
-        textFieldPassword.sendKeys(password);
+        elementsUtilities.elementSendKeys(textFieldPassword,password);
     }
 
     public void setDaysInDOB(String dateOfBirth)
@@ -126,37 +129,37 @@ public class SignupFormScreen
 
     public void clickNewsletter()
     {
-        checkBoxNewsLetter.click();
+        elementsUtilities.elementClick(checkBoxNewsLetter);
     }
 
     public void clikSpecialOffers()
     {
-        checkBoxSpecialOffers.click();
+        elementsUtilities.elementClick(checkBoxSpecialOffers);
     }
 
     public void setFirstName(String firstName)
     {
-        textFieldFirstName.sendKeys(firstName);
+        elementsUtilities.elementSendKeys(textFieldFirstName,firstName);
     }
 
     public void setLastName(String lastName)
     {
-        textFieldLastName.sendKeys(lastName);
+       elementsUtilities.elementSendKeys(textFieldLastName,lastName);
     }
 
     public void setCompany(String company)
     {
-        textFieldCompany.sendKeys(company);
+      elementsUtilities.elementSendKeys(textFieldCompany,company);
     }
 
     public void setTextFieldAddress1(String address1)
     {
-        textFieldAddress1.sendKeys(address1);
+        elementsUtilities.elementSendKeys(textFieldAddress1,address1);
     }
 
     public void setTextFieldAddress2(String address2)
     {
-        textFieldAddress2.sendKeys(address2);
+       elementsUtilities.elementSendKeys(textFieldAddress2,address2);
     }
 
     public void selectCountry(String country)
@@ -167,26 +170,26 @@ public class SignupFormScreen
 
     public void setState(String state)
     {
-        textFieldState.sendKeys(state);
+       elementsUtilities.elementSendKeys(textFieldState,state);
     }
 
     public void setZipcode(String zipcode)
     {
-        textFieldZipcode.sendKeys(zipcode);
+        elementsUtilities.elementSendKeys(textFieldZipcode,zipcode);
     }
 
     public void setMobileNUmber(String mobileNUmber)
     {
-        textFieldMobileNUmber.sendKeys(mobileNUmber);
+        elementsUtilities.elementSendKeys(textFieldMobileNUmber,mobileNUmber);
     }
 
     public void clickOnSubmitForm()
     {
-        buttonSubmitForm.click();
+        elementsUtilities.elementClick(buttonSubmitForm);
     }
     public void setTextFieldCity(String city)
     {
-        textFieldCity.sendKeys(city);
+        elementsUtilities.elementSendKeys(textFieldCity,city);
     }
 
 }

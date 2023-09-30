@@ -59,7 +59,7 @@ public class HomePage
     //Methods
     public void clickOnLogin_SignupLink()
     {
-        login_Signuplink.click();
+        elementsUtilities.elementClick(login_Signuplink);
     }
 
     public String getpageTitle()
@@ -68,97 +68,48 @@ public class HomePage
     }
     public void clickOnContactUsButton()
     {
-        try {
-            button_contactus.click();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logInfo("Issue with contact us locator "+button_contactus);
-        }
+        elementsUtilities.elementClick(button_contactus);
     }
 
     public void clickOnTestCaseButton()
     {
-        try {
-            btnTestCases.click();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logInfo("Issue with contact us locator "+btnTestCases);
-        }
+         elementsUtilities.elementClick(btnTestCases);
     }
 
     public void clickOnProductsButton()
     {
-        try {
-            btnProducts.click();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Issues with the locator "+btnProducts + "  "+ e.getMessage());
-        }
+        elementsUtilities.elementClick(btnProducts);
     }
 
     public void scrollToFooterWidget()
     {
-        try {
-            genericUtils.scrollIntoView(footerWidget);
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Issues with the locator "+footerWidget + "  "+ e.getMessage());
-        }
-
+        genericUtils.scrollIntoView(footerWidget);
     }
 
     public String getSubscriptionText()
     {
-        try
-         {
-        return subscriptionText.getText();
-         }catch (NoSuchElementException | ElementNotInteractableException e)
-    {
-        LoggerHelper.logError("Issues with the locator "+subscriptionText + "  "+ e.getMessage());
-    }
-    return null;
+        return elementsUtilities.getTextsOfElement(subscriptionText);
     }
 
     public void setSubscriptionEmail(String email)
     {
-        try {
-            textEnterEmail.sendKeys(email);
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Issues with the locator "+textEnterEmail + "  "+ e.getMessage());
-        }
+        elementsUtilities.elementSendKeys(textEnterEmail,email);
     }
 
     public void clickOnArrowbutton()
     {
-        try {
-            btnArrowSubscription.click();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Issues with the locator "+btnArrowSubscription + "  "+ e.getMessage());
-        }
+       elementsUtilities.elementClick(btnArrowSubscription);
     }
 
     public String getSuccessSubscriptionMessage()
     {
-        try {
-           return subscriptionSuccessMessage.getText();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Issues with the locator "+subscriptionSuccessMessage + "  "+ e.getMessage());
-        }
-        return null;
+        return elementsUtilities.getTextsOfElement(subscriptionSuccessMessage);
     }
 
     public void clickOnCartButton()
     {
-        try {
-            genericUtils.waitForElementToBeClickable(btnCart, Duration.ofSeconds(5));
-        btnCart.click();
-    }catch (NoSuchElementException | ElementNotInteractableException e)
-    {
-        LoggerHelper.logError("Issues with the locator "+btnCart + "  "+ e.getMessage());
-    }
+        genericUtils.waitForElementToBeClickable(btnCart, Duration.ofSeconds(5));
+        elementsUtilities.elementClick(btnCart);
     }
 
     public void clickOnViewProductButton()

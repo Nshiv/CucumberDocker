@@ -6,15 +6,15 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         glue = {"parallelStepdefHooks"},
-        features = "src/test/resources/parallel",
+        features = "@target/failed_scenarios.txt",
         monochrome = true,
         tags="@wip",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failed_scenarios.txt",
-        "timeline:test-output-thread/",
-       }
+                "timeline:test-output-thread/",
+        }
 )
 
-public class TestParallel extends AbstractTestNGCucumberTests {
+public class FailedScenariosRunner extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {

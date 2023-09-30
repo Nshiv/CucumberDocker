@@ -60,45 +60,23 @@ public class ProductsListingScreen
 
     public String getVerificationTexts()
     {
-        try {
-            return verificationTextOnProductScreen.getText();
-        }catch (ElementNotInteractableException | NoSuchElementException e)
-        {
-            LoggerHelper.logError("Issue with the Locator >>" +verificationTextOnProductScreen+ ">>"+e.getMessage());
-        }
-        return null;
+       return elementsUtilities.getTextsOfElement(verificationTextOnProductScreen);
     }
 
     public void clickOnFirstProduct()
     {
-
-        try {
-            genericUtils.scrollIntoView(scrollToViewElement);
-            scrollToViewElement.click();
-        }catch (ElementNotInteractableException | NoSuchElementException e)
-        {
-            LoggerHelper.logError("Issue with the Locator >>" +scrollToViewElement+e.getMessage());
-        }
+        genericUtils.scrollIntoView(scrollToViewElement);
+        elementsUtilities.elementClick(scrollToViewElement);
     }
 
     public void setSearchInput(String input)
     {
-        try {
-            search_bar.sendKeys(input);
-        }catch (ElementNotInteractableException | NoSuchElementException e)
-        {
-            LoggerHelper.logError("Issue with the Locator >>" +search_bar+e.getMessage());
-        }
+        elementsUtilities.elementSendKeys(search_bar,input);
     }
 
     public void clickSearchButton()
     {
-        try {
-            btn_search.click();
-        }catch (ElementNotInteractableException | NoSuchElementException e)
-        {
-            LoggerHelper.logError("Issue with the Locator >>" +btn_search+e.getMessage());
-        }
+       elementsUtilities.elementClick(btn_search);
     }
 
     public List<WebElement> getProductsTitle()
@@ -107,7 +85,7 @@ public class ProductsListingScreen
             return productsTitle;
         }catch (ElementNotInteractableException | NoSuchElementException e)
         {
-            LoggerHelper.logError("Issue with the Locator >>" +btn_search+e.getMessage());
+            LoggerHelper.logError("Issue with the Locator >>" +productsTitle+e.getMessage());
         }
         return null;
     }
@@ -115,14 +93,13 @@ public class ProductsListingScreen
     public void clickOnAddToCartOnHoverOverlay()
     {
       genericUtils.waitForElementToBeVisible(btnAddToCartOnMouseHover,Duration.ofSeconds(10));
-      if(btnAddToCartOnMouseHover.isDisplayed())
+      if(elementsUtilities.elementIsDisplays(btnAddToCartOnMouseHover))
       {
-          btnAddToCartOnMouseHover.click();
+          elementsUtilities.elementClick(btnAddToCartOnMouseHover);
       }
       else
       {
-          System.out.println("Not displays"+ btnAddToCartOnMouseHover.isDisplayed());
-          LoggerHelper.logError("Unable to click as elemtn not present");
+          LoggerHelper.logError("Unable to click as elemetn not present with values >>>"+elementsUtilities.elementIsDisplays(btnAddToCartOnMouseHover));
       }
 
     }
@@ -145,18 +122,15 @@ public class ProductsListingScreen
     }
 
     public void clickOnContinueShoppingButton()
-    {try {
-        genericUtils.waitForElementToBeClickable(btnContinueShopping,Duration.ofSeconds(10));
-        if(btnContinueShopping.isDisplayed())
-        {
-            btnContinueShopping.click();
-        }
-
-    }catch (Exception e)
     {
-        LoggerHelper.logError("Issue with the locator"+btnContinueShopping+" "+e.getMessage());
-    }
-
+        genericUtils.waitForElementToBeClickable(btnContinueShopping,Duration.ofSeconds(10));
+        if(elementsUtilities.elementIsDisplays(btnContinueShopping))
+        {
+          elementsUtilities.elementClick(btnContinueShopping);
+        }
+        else {
+            LoggerHelper.logError("Not clicked on button "+btnContinueShopping);
+        }
     }
 
     public String getParentWindowHandle()
@@ -171,12 +145,12 @@ public class ProductsListingScreen
 
     public boolean getContinueButtonStatus()
     {
-        return btnContinueShopping.isDisplayed();
+        return elementsUtilities.elementIsDisplays(btnContinueShopping);
     }
 
     public boolean getStatusOfAddToCartButton()
     {
-        return btnAddToCartOnMouseHover.isDisplayed();
+        return elementsUtilities.elementIsDisplays(btnAddToCartOnMouseHover);
     }
     public void clickOnviewCartLink()
     {

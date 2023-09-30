@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ElementsUtilities;
 import utilities.GenericUtils;
 
 import java.time.Duration;
@@ -16,12 +17,14 @@ public class LoginScreen
 {
     public WebDriver driver;
     public GenericUtils genericUtils;
+    private ElementsUtilities elementsUtilities;
 
     public LoginScreen(WebDriver driver)
     {
         this.driver=driver;
         PageFactory.initElements(driver,this);
         genericUtils = new GenericUtils(driver);
+        elementsUtilities = new ElementsUtilities(driver);
     }
 
     //locators
@@ -60,22 +63,22 @@ public class LoginScreen
 
     public String getTextsForSignUp()
     {
-        return  login_signUptexts.getText().toLowerCase().trim();
+        return  elementsUtilities.getTextsOfElement(login_signUptexts).trim().toLowerCase();
     }
 
     public void setSignupName(String userName)
     {
-        nameInputField.sendKeys(userName);
+        elementsUtilities.elementSendKeys(nameInputField,userName);
     }
 
     public void setSignupEmail(String signupEmail)
     {
-        emailInputField.sendKeys(signupEmail);
+       elementsUtilities.elementSendKeys(emailInputField,signupEmail);
     }
 
     public void clickSignupButton()
     {
-        signupButton.click();
+      elementsUtilities.elementClick(signupButton);
     }
 
     public String getPageTitle()
@@ -84,50 +87,27 @@ public class LoginScreen
     }
     public String getLoginVeificationText()
     {
-        return loginTexts.getText().toLowerCase().trim();
+      return  elementsUtilities.getTextsOfElement(loginTexts).trim().toLowerCase();
     }
     public void setLoginEmail(String email)
     {
-        try {
-            loginEmail.sendKeys(email);
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logElementNotFoundException(String.valueOf(loginEmail));
-        }
-
+        elementsUtilities.elementSendKeys(loginEmail,email);
     }
 
     public void setLoginPassword(String password)
     {
-        try {
-            loginPassword.sendKeys(password);
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logException("Issue with element", e);
-        }
+        elementsUtilities.elementSendKeys(loginPassword,password);
     }
 
     public void clickOnLoginButton()
     {
-        try{
-            loginButton.click();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logException("Eigther element not presernt or interactable", e);
-        }
-
+       elementsUtilities.elementClick(loginButton);
     }
 
     public String getErrorMessageOnIncorrectLoginPassword()
     {
-        try {
             genericUtils.waitForElementToBeVisible(errorMessageOnInvalidLoginPassword, Duration.ofSeconds(10));
-            return  errorMessageOnInvalidLoginPassword.getText();
-        }catch (ElementNotInteractableException | NoSuchElementException e)
-        {
-            LoggerHelper.logInfo(e.getMessage());
-            return null;
-        }
+            return  elementsUtilities.getTextsOfElement(errorMessageOnInvalidLoginPassword);
     }
 
     public String getScreenURL()
@@ -138,13 +118,6 @@ public class LoginScreen
 
     public String getErrorMessageForSignupWithRegisteredUser()
     {
-        try {
-            return errorMessageOnSignupWithRegistereduser.getText();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logException("Element locator issue identify " ,e);
-        }
-        return null;
-
+       return elementsUtilities.getTextsOfElement(errorMessageOnSignupWithRegistereduser);
     }
 }

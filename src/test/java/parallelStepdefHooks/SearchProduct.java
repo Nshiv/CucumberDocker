@@ -40,7 +40,7 @@ public class SearchProduct
         for(WebElement titleElement : titles)
         {
             String actualTitle = titleElement.getText();
-            //System.out.println(actualTitle);
+            System.out.println(actualTitle);
             if(!actualTitle.contains(expectedTitle))
             {
                 flag=false;

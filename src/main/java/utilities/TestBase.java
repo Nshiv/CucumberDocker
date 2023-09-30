@@ -1,12 +1,20 @@
 package utilities;
 
+import logManager.LoggerHelper;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
+import java.rmi.Remote;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -19,6 +27,7 @@ public class TestBase {
         Properties prop = new Properties();
         prop.load(fis);
         String platform = prop.getProperty("remote");
+        String hubURL = prop.getProperty("hubURL");
         //String browser = browser_maven != null ? browser_maven:browser_prop;
             if (platform.equalsIgnoreCase("no"))
             {
@@ -33,7 +42,9 @@ public class TestBase {
                 {
                     String edgeDriverPath = "src/test/resources/testDrivers/msedgedriver.exe";
                     System.setProperty("webdriver.edge.driver", edgeDriverPath);
-                    tlDriver.set(new EdgeDriver());
+                    EdgeOptions edgeOp = new EdgeOptions();
+                    edgeOp.addArguments("--headless");
+                    tlDriver.set(new EdgeDriver(edgeOp));
                 } else if (browser.trim().equalsIgnoreCase("firefox"))
                 {
                     String geckoDriverPath = "src/test/resources/testDrivers/geckodriver.exe";
@@ -41,7 +52,34 @@ public class TestBase {
                     tlDriver.set(new FirefoxDriver());
                 }
 
-            }return getDriver();
+            } else if(platform.equalsIgnoreCase("yes"))
+            {
+                if (browser.trim().equalsIgnoreCase("chrome"))
+                {
+                    DesiredCapabilities capabilities = new DesiredCapabilities();
+                    capabilities.setBrowserName(browser);
+                    capabilities.setPlatform(Platform.LINUX);
+                    tlDriver.set(new RemoteWebDriver(new URL(hubURL),capabilities));
+                }
+                if (browser.trim().equalsIgnoreCase("edge"))
+                {
+                    DesiredCapabilities capabilities = new DesiredCapabilities();
+                    capabilities.setBrowserName(browser);
+                    capabilities.setPlatform(Platform.LINUX);
+                    tlDriver.set(new RemoteWebDriver(new URL(hubURL),capabilities));
+                }
+                if (browser.trim().equalsIgnoreCase("firefox"))
+                {
+                    DesiredCapabilities capabilities = new DesiredCapabilities();
+                    capabilities.setBrowserName(browser);
+                    capabilities.setPlatform(Platform.LINUX);
+                    tlDriver.set(new RemoteWebDriver(new URL(hubURL),capabilities));
+                }
+            }
+            else {
+                LoggerHelper.logError("Error in passing browsers info");
+            }
+            return getDriver();
     }
 
     public static synchronized WebDriver getDriver()

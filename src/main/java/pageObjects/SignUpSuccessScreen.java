@@ -4,14 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ElementsUtilities;
 
 public class SignUpSuccessScreen
 {
     public WebDriver driver;
+    private ElementsUtilities elementsUtilities;
     public SignUpSuccessScreen(WebDriver driver)
     {
         this.driver=driver;
         PageFactory.initElements(driver,this);
+        elementsUtilities= new ElementsUtilities(driver);
     }
 
     // elements
@@ -25,12 +28,12 @@ public class SignUpSuccessScreen
 
     public String getSignUpSucesstexts()
     {
-        return signUpSuccessmessage.getText();
+        return elementsUtilities.getTextsOfElement(signUpSuccessmessage);
     }
 
     public void clickContinuebutton()
     {
-        btnContinue.click();
+       elementsUtilities.elementClick(btnContinue);
     }
 
 }

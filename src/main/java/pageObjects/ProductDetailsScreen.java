@@ -53,70 +53,33 @@ public class ProductDetailsScreen
 
     public boolean getProductNameField()
     {
-        try{
-        return productName.isDisplayed();
-    }catch (NoSuchElementException | ElementNotInteractableException e)
-    {
-        LoggerHelper.logError("Isuse with the locator "+productName+" "+ e.getMessage() );
-    }
-     return false;
+        return elementsUtilities.elementIsDisplays(productName);
     }
 
     public boolean getCategoryNameField()
     {
-        try{
-            return categoryName.isDisplayed();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Isuse with the locator "+categoryName+" "+ e.getMessage() );
-        }
-        return false;
+       return elementsUtilities.elementIsDisplays(categoryName);
 
     }
     public boolean getAvailabilityField()
     {
-        try{
-            return availability.isDisplayed();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Isuse with the locator "+availability+" "+ e.getMessage() );
-        }
-        return false;
+        return elementsUtilities.elementIsDisplays(availability);
     }
 
     public boolean getConditionField()
     {
-        try{
-            return  condition.isDisplayed();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Isuse with the locator "+condition+" "+ e.getMessage() );
-        }
-        return false;
+        return elementsUtilities.elementIsDisplays(condition);
     }
 
     public boolean getBrandField()
     {
-        try{
-            return brand.isDisplayed();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Isuse with the locator "+brand+" "+ e.getMessage() );
-        }
-        return false;
+       return elementsUtilities.elementIsDisplays(brand);
     }
 
     public boolean getAddtoCartButton()
     {
-
-        try{
             genericUtils.waitForElementToBeVisible(addToCartButton, Duration.ofSeconds(10));
-            return addToCartButton.isDisplayed();
-        }catch (NoSuchElementException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logError("Isuse with the locator "+addToCartButton+" "+ e.getMessage() );
-        }
-        return false;
+            return elementsUtilities.elementIsDisplays(addToCartButton);
     }
 
     public void setProduct_Quantity(String quantity)

@@ -4,13 +4,17 @@ import logManager.LoggerHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ElementsUtilities;
+
 
 public class ContactUsForm {
     public WebDriver driver;
+    public ElementsUtilities elementsUtilities;
 
     public ContactUsForm(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        elementsUtilities= new ElementsUtilities(driver);
     }
 
     //Locators
@@ -44,82 +48,40 @@ public class ContactUsForm {
     //Methods
 
     public String getTextsOnContactUs() {
-        try {
-            return getInTouchText.getText();
-        } catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
-        return null;
+        return elementsUtilities.getTextsOfElement(getInTouchText);
     }
 
     public void setName(String name) {
-        try {
-            textName.sendKeys(name);
-        } catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
+       elementsUtilities.elementSendKeys(textName,name);
     }
 
     public void setEmail(String email) {
-        try {
-            textEmail.sendKeys(email);
-        } catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
+            elementsUtilities.elementSendKeys(textEmail,email);
     }
 
     public void setSubject(String subject) {
-        try {
-            textSubject.sendKeys(subject);
-        } catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
+            elementsUtilities.elementSendKeys(textSubject,subject);
     }
 
     public void setMessage(String message) {
-        try {
-            textMessage.sendKeys(message);
-        } catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
+          elementsUtilities.elementSendKeys(textMessage,message);
     }
 
     public void setUpload() {
-        try {
             String filePath ="D:\\TestUploadFiles\\Books+API.pdf";
-            uploadFile.sendKeys(filePath);
-        }catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e)
-        {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
-
-
+            elementsUtilities.elementSendKeys(uploadFile,filePath);
     }
 
     public void clickSubmitButton() {
-        try {
-            btnSubmit.click();
-        } catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
+          elementsUtilities.elementClick(btnSubmit);
     }
 
     public String getUploadSuccessTexts()
     {
-        try {
-            return textUploadSuccess.getText();
-        }catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
-        return null;
+        return elementsUtilities.getTextsOfElement(textUploadSuccess);
     }
 
-    public void clickOnHomeButton()
-    {
-        try {
-            btnHome.click();
-        }catch (NoSuchElementException | InvalidSelectorException | ElementNotInteractableException e) {
-            LoggerHelper.logInfo("Issue with the locator " + e.getMessage());
-        }
+    public void clickOnHomeButton() {
+        elementsUtilities.elementClick(btnHome);
     }
 }
