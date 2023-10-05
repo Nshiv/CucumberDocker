@@ -8,100 +8,99 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
-import java.rmi.Remote;
-import java.time.Duration;
-import java.util.Properties;
 
 public class TestBase {
 
-    public WebDriver driver;
-    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
-    public synchronized WebDriver webDriverManager(String browser) throws IOException {
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/global.properties");
-        Properties prop = new Properties();
-        prop.load(fis);
-        String platform = prop.getProperty("remote");
-        String hubURL = prop.getProperty("hubURL");
-        //String browser = browser_maven != null ? browser_maven:browser_prop;
-            if (platform.equalsIgnoreCase("no"))
-            {
-                if (browser.trim().equalsIgnoreCase("chrome"))
-                {
-                    String chromeDriverPath = "src/test/resources/testDrivers/chromedriver.exe";
-                    System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-                    ChromeOptions options = getChromeOptions();
-                    tlDriver.set(new ChromeDriver(options));
+    private PropertyReader propertyReader;
+    private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-                } else if (browser.trim().equalsIgnoreCase("edge"))
-                {
-                    String edgeDriverPath = "src/test/resources/testDrivers/msedgedriver.exe";
-                    System.setProperty("webdriver.edge.driver", edgeDriverPath);
-                    EdgeOptions edgeOp = new EdgeOptions();
-                    edgeOp.addArguments("--headless");
-                    tlDriver.set(new EdgeDriver(edgeOp));
-                } else if (browser.trim().equalsIgnoreCase("firefox"))
-                {
-                    String geckoDriverPath = "src/test/resources/testDrivers/geckodriver.exe";
-                    System.setProperty("webdriver.gecko.driver", geckoDriverPath);
-                    tlDriver.set(new FirefoxDriver());
-                }
+    public WebDriver webDriverManager(String browser) throws IOException {
+        propertyReader = new PropertyReader();
+        String platform = propertyReader.getPlateform();
+        String hubURL = propertyReader.getHubURL();
 
-            } else if(platform.equalsIgnoreCase("yes"))
-            {
-                if (browser.trim().equalsIgnoreCase("chrome"))
-                {
-                    DesiredCapabilities capabilities = new DesiredCapabilities();
-                    capabilities.setBrowserName(browser);
-                    capabilities.setPlatform(Platform.LINUX);
-                    tlDriver.set(new RemoteWebDriver(new URL(hubURL),capabilities));
-                }
-                if (browser.trim().equalsIgnoreCase("edge"))
-                {
-                    DesiredCapabilities capabilities = new DesiredCapabilities();
-                    capabilities.setBrowserName(browser);
-                    capabilities.setPlatform(Platform.LINUX);
-                    tlDriver.set(new RemoteWebDriver(new URL(hubURL),capabilities));
-                }
-                if (browser.trim().equalsIgnoreCase("firefox"))
-                {
-                    DesiredCapabilities capabilities = new DesiredCapabilities();
-                    capabilities.setBrowserName(browser);
-                    capabilities.setPlatform(Platform.LINUX);
-                    tlDriver.set(new RemoteWebDriver(new URL(hubURL),capabilities));
-                }
-            }
-            else {
-                LoggerHelper.logError("Error in passing browsers info");
-            }
-            return getDriver();
+        WebDriver driver;
+
+        if (platform.equalsIgnoreCase("no")) {
+            driver = createLocalDriver(browser);
+        } else if (platform.equalsIgnoreCase("yes")) {
+            driver = createRemoteDriver(browser, hubURL);
+        } else {
+            throw new IllegalArgumentException("Invalid platform specified.");
+        }
+
+        // Store the driver instance in ThreadLocal
+        tlDriver.set(driver);
+
+        return driver;
     }
 
-    public static synchronized WebDriver getDriver()
-    {
-       return tlDriver.get();
+    public static synchronized WebDriver getDriver() {
+        return tlDriver.get();
     }
 
-    public static synchronized void quitDriver()
-    {
+    public static synchronized void quitDriver() {
         WebDriver driver = tlDriver.get();
         if (driver != null) {
             driver.quit();
             tlDriver.remove();
         }
     }
-    private static ChromeOptions getChromeOptions()
-    {
+
+    private WebDriver createLocalDriver(String browser) {
+        WebDriver driver;
+        switch (browser.trim().toLowerCase()) {
+            case "chrome":
+                String chromeDriverPath = "src/test/resources/testDrivers/chromedriver.exe";
+                System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+                ChromeOptions chromeOptions = getChromeOptions();
+                driver = new ChromeDriver(chromeOptions);
+                break;
+            case "edge":
+                String edgeDriverPath = "src/test/resources/testDrivers/msedgedriver.exe";
+                System.setProperty("webdriver.edge.driver", edgeDriverPath);
+                EdgeOptions edgeOptions = new EdgeOptions();
+                // edgeOptions.addArguments("--headless");
+                driver = new EdgeDriver(edgeOptions);
+                break;
+            case "firefox":
+                String geckoDriverPath = "src/test/resources/testDrivers/geckodriver.exe";
+                System.setProperty("webdriver.gecko.driver", geckoDriverPath);
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.setAcceptInsecureCerts(true);
+                driver = new FirefoxDriver(firefoxOptions);
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid browser specified.");
+        }
+        return driver;
+    }
+
+    private WebDriver createRemoteDriver(String browser, String hubURL) {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName(browser);
+        capabilities.setPlatform(Platform.LINUX);
+
+        try {
+            return new RemoteWebDriver(new URL(hubURL), capabilities);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("Failed to create a RemoteWebDriver instance.", e);
+        }
+    }
+
+    private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         options.setAcceptInsecureCerts(true);
         options.addArguments("start-maximized");
         options.addArguments("disable-infobars");
-        options.setBinary("C:\\Users\\ASUS1\\Downloads\\ChromeBrowser\\chrome-win64\\chrome-win64\\chrome.exe");
+        //options.setBinary("C:\\Users\\ASUS1\\Downloads\\ChromeBrowser\\chrome-win64\\chrome-win64\\chrome.exe");
         options.addArguments("--disable-javascript");
         options.addArguments("ignore-certificate-errors");
         return options;

@@ -1,6 +1,6 @@
 Feature: User logout
 
-  @smoke@wip
+  @smoke
   Scenario: I am able to logout after successfull login
     Then I validate homepage Title is "Automation Exercise" is displays
     And I click on Sign in button on homepage

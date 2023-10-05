@@ -5,41 +5,41 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
+import org.testng.ITestContext;
+import org.testng.annotations.Parameters;
+import utilities.PropertyReader;
 import utilities.TestBase;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
 
 public class Hooks
 {
     private TestBase testBase;
-    private Properties properties;
+    private PropertyReader propertyReader;
     public WebDriver driver;
+    //private List<String> browsers;
     @Before(order = 0)
     public void launchBrowser() {
-        String browser_prop = null;
-        String project_url = null;
+        propertyReader= new PropertyReader();
+        //String browser = System.getProperty("browser");
+        String project_url = propertyReader.getProjectURL();
+        String testNGBrowser = propertyReader.getTestNGBrowser();
+        //String browser = propertyReader.getBrowser();
+        testBase = new TestBase();
         try {
-            FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/global.properties");
-            properties = new Properties();
-            properties.load(fis);
-            testBase = new TestBase();
-            project_url = properties.getProperty("url");
-            browser_prop = properties.getProperty("browser");
-        } catch (IOException e) {
-            LoggerHelper.logError("Error in reading and fetching properties file values   >>" + e.getMessage());
+            driver = testBase.webDriverManager(testNGBrowser);
+        }catch (IOException e)
+        {
+            LoggerHelper.logError("weddriver issues "+e.getMessage());
         }
-        try {
-            this.driver = testBase.webDriverManager(browser_prop);
-        } catch (WebDriverException | IOException e) {
-            LoggerHelper.logException("launch browser exceptions" + e.getMessage(),e);
-        }
-
-        //driver.manage().window().maximize();
-        this.driver.get(project_url);
-        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.get(project_url);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
 
@@ -54,8 +54,8 @@ public class Hooks
     @After(order = 2)
     public void quitBrowser() throws IOException
     {
-        if (this.driver != null) {
-            this.driver.quit();
+        if (driver != null) {
+            driver.quit();
         }
     }
 
