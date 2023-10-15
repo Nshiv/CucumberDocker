@@ -1,6 +1,6 @@
 Feature: Place Order
   
-    @smoke
+    @wip
     Scenario: Place order after login
       Then I verify homepage Title is "Automation Exercise"
       When I click on Sign in button

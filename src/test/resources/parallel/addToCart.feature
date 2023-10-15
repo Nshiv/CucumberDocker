@@ -1,6 +1,6 @@
 Feature: Add products to cart
 
-  @smoke
+  @wip
   Scenario: Verify add to cart flow for multiple products
     Then I verify that homepage Title is "Automation Exercise" displays on screen
     And  I Click on Products button
@@ -12,7 +12,7 @@ Feature: Add products to cart
     And  I verify quantity
     And  I verify  total price
 
-  @smoke
+  @wip
   Scenario: Increase product quantity on cart screen
     Then I verify that homepage Title is "Automation Exercise" displays on screen
     When I click on view product button on homepage screen

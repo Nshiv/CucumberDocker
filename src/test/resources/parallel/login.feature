@@ -1,6 +1,6 @@
 Feature: User Login
 
-  @smoke
+  @wip
   Scenario: Validate login
     Then I verify homepage Title is "Automation Exercise"
     And I click on Sign in button

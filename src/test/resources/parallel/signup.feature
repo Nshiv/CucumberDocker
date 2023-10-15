@@ -1,6 +1,6 @@
 Feature: User Signup
 
-  @smoke
+  @wip
   Scenario: User Signup
     Given I navigated to homepage
     Then I verify that homepage Title is "Automation Exercise"

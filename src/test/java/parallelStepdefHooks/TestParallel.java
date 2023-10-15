@@ -11,7 +11,7 @@ import utilities.PropertyReader;
         glue = {"parallelStepdefHooks"},
         features = "src/test/resources/parallel",
         monochrome = true,
-        tags="@wip",
+        tags="@smoke",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failed_scenarios.txt",
         "timeline:test-output-thread/",
        }
