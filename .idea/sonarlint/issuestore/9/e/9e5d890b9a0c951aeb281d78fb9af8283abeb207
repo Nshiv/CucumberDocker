@@ -1,0 +1,61 @@
+
+D
+java:S1121".Extract the assignment out of this expression.(Óâ«ç
+D
+java:S1121!".Extract the assignment out of this expression.(÷¬æ©
+I
+java:S1121%".Extract the assignment out of this expression.(Æ—ä€şÿÿÿÿ
+D
+java:S1121)".Extract the assignment out of this expression.(Öî½Ü
+D
+java:S1121-".Extract the assignment out of this expression.(¤”×™
+I
+java:S11211".Extract the assignment out of this expression.(Çİÿüÿÿÿÿ
+I
+java:S11215".Extract the assignment out of this expression.(¤Õé™ÿÿÿÿÿ
+D
+java:S11219".Extract the assignment out of this expression.(ˆßïÄ
+I
+java:S1121=".Extract the assignment out of this expression.(óÔÂñüÿÿÿÿ
+D
+java:S1121A".Extract the assignment out of this expression.(Ùï”
+D
+java:S1121E".Extract the assignment out of this expression.(ÒÃ€ 
+I
+java:S1121I".Extract the assignment out of this expression.(ãö¶×ıÿÿÿÿ
+I
+java:S1121M".Extract the assignment out of this expression.(ì¥ş•üÿÿÿÿ
+D
+java:S1121Q".Extract the assignment out of this expression.(Ã“³…
+m
+java:S1104"RMake driver a static final constant or non-public and provide accessors if needed.(ÔèË©úÿÿÿÿ
+j
+java:S1104	"TMake homePage a static final constant or non-public and provide accessors if needed.(ß€¢Ç
+l
+java:S1104
+"WMake loginScreen a static final constant or non-public and provide accessors if needed.(æóv
+r
+java:S1104"\Make signupFormScreen a static final constant or non-public and provide accessors if needed.(ç÷¨È
+z
+java:S1104"_Make signUpSuccessScreen a static final constant or non-public and provide accessors if needed.(Å¡…Èùÿÿÿÿ
+u
+java:S1104"ZMake loggedInScreen a static final constant or non-public and provide accessors if needed.(ƒ ·ûÿÿÿÿ
+u
+java:S1104"`Make deletedAccountScreen a static final constant or non-public and provide accessors if needed.(•Ür
+o
+java:S1104"YMake contactUsForm a static final constant or non-public and provide accessors if needed.(Ÿ„¬ƒ
+n
+java:S1104"YMake testCasesPage a static final constant or non-public and provide accessors if needed.(Î¨`
+|
+java:S1104"aMake productsListingScreen a static final constant or non-public and provide accessors if needed.(î¶…ıÿÿÿÿ
+{
+java:S1104"`Make productDetailsScreen a static final constant or non-public and provide accessors if needed.(ú”ãÿÿÿÿÿ
+j
+java:S1104"TMake cartPage a static final constant or non-public and provide accessors if needed.(óõÏ´
+p
+java:S1104"ZMake checkoutScreen a static final constant or non-public and provide accessors if needed.(ÿ²£
+t
+java:S1104"YMake paymentScreen a static final constant or non-public and provide accessors if needed.(¨Æ¿Éÿÿÿÿÿ
+v
+java:S1104"`Make paymentSuccessScreen a static final constant or non-public and provide accessors if needed.(í¨¬³
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿†Ğ€
