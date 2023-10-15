@@ -87,7 +87,6 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName(browser);
         capabilities.setPlatform(Platform.LINUX);
-
         try {
             return new RemoteWebDriver(new URL(hubURL), capabilities);
         } catch (MalformedURLException e) {

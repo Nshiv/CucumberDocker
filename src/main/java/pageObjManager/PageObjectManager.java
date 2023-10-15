@@ -19,13 +19,11 @@ public class PageObjectManager
     public CartPage cartPage;
     public CheckoutScreen checkoutScreen;
     public PaymentScreen paymentScreen;
-
     public PaymentSuccessScreen paymentSuccessScreen;
     public PageObjectManager(WebDriver driver)
     {
         this.driver=driver;
     }
-
     public HomePage getHomePage()
     {
         return homePage= new HomePage(driver);
@@ -34,7 +32,6 @@ public class PageObjectManager
     {
         return loginScreen = new LoginScreen(driver);
     }
-
     public SignupFormScreen getSignupFormScreen()
     {
         return signupFormScreen = new SignupFormScreen(driver);
@@ -63,13 +60,10 @@ public class PageObjectManager
     {
         return productDetailsScreen= new ProductDetailsScreen(driver);
     }
-
     public ProductsListingScreen getProductsListingScreen()
     {
         return productsListingScreen = new ProductsListingScreen(driver);
     }
-
-
     public CartPage getCartPage()
     {
         return cartPage= new CartPage((driver));
@@ -78,17 +72,12 @@ public class PageObjectManager
     {
         return checkoutScreen = new CheckoutScreen(driver);
     }
-
     public PaymentScreen getPaymentScreen()
     {
         return paymentScreen = new PaymentScreen(driver);
     }
-
     public PaymentSuccessScreen getPaymentSuccessScreen()
     {
        return paymentSuccessScreen = new PaymentSuccessScreen(driver);
     }
-
-
-
 }
