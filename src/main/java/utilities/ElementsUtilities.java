@@ -80,7 +80,7 @@ public class ElementsUtilities
         return null;
     }
 
-    public int getSizeOfListofElements(List<WebElement> elements)
+    public int getSizeOfListOfElements(List<WebElement> elements)
     {
         try {
             return elements.size();

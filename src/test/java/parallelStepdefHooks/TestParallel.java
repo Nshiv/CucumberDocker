@@ -11,7 +11,7 @@ import utilities.PropertyReader;
         glue = {"parallelStepdefHooks"},
         features = "src/test/resources/parallel",
         monochrome = true,
-        tags="@smoke",
+        tags="@smoke ",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failed_scenarios.txt",
         "timeline:test-output-thread/",
        }
@@ -20,7 +20,7 @@ import utilities.PropertyReader;
 public class TestParallel extends AbstractTestNGCucumberTests
 {
        @Override
-       @DataProvider(parallel = true)
+       @DataProvider(parallel = false)
        public Object[][] scenarios()
        {
           return super.scenarios();

@@ -55,9 +55,16 @@ public class HomePage
     @FindBy(xpath = "//a[@href='/product_details/1']")
     private WebElement viewProductButton;
 
+    @FindBy(xpath = "//div[@class='item active']//h2[contains(text(),'Full-Fledged practice website for Automation Engineers')]")
+    private WebElement textOnBanner;
+
+    @FindBy(css = "a#scrollUp")
+    private WebElement scrollUpButton;
+
+
 
     //Methods
-    public void clickOnLogin_SignupLink()
+    public void clickOnLoginSignupLink()
     {
         elementsUtilities.elementClick(login_Signuplink);
     }
@@ -115,5 +122,19 @@ public class HomePage
     public void clickOnViewProductButton()
     {
        elementsUtilities.elementClick(viewProductButton);
+    }
+    public String getBannerTexts()
+    {
+        return elementsUtilities.getTextsOfElement(textOnBanner);
+    }
+
+    public void clickOnScrollUpButton()
+    {
+        elementsUtilities.elementClick(scrollUpButton);
+    }
+
+    public void scrollUpTillBanner()
+    {
+        genericUtils.scrollIntoView(scrollUpButton);
     }
 }

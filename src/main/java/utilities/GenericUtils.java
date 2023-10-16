@@ -3,12 +3,9 @@ package utilities;
 import logManager.LoggerHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-import java.util.Iterator;
 import java.util.Set;
 
 public class GenericUtils
@@ -67,12 +64,9 @@ public class GenericUtils
     }
 
     public void scrollIntoView(WebElement element) {
-        try {
+
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        }catch (ElementNotInteractableException | NoSuchElementException e)
-        {
-            LoggerHelper.logError("Element to perform hover actions has some error >>"+e.getMessage());
-        }
+
 
     }
 
@@ -86,11 +80,6 @@ public class GenericUtils
         }
 
     }
-
-   /* public void mouseHoverAndClick(WebElement element)
-    {
-        actions.moveToElement(element).click().build().perform();
-    }*/
 
     public void mouseHover(WebElement element)
     {try {

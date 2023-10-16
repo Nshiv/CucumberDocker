@@ -33,7 +33,7 @@ public class UserLogin
    @And("I click on Sign in button")
     public  void userClickonSigninButton()
    {
-       homePage.clickOnLogin_SignupLink();
+       homePage.clickOnLoginSignupLink();
    }
 
    @Then("I verify {string} is visible")

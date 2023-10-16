@@ -28,7 +28,7 @@ public class InvalidUserLogin
     @And("I click on Sign-in button")
     public void clickOnSignInButton()
     {
-        homePage.clickOnLogin_SignupLink();
+        homePage.clickOnLoginSignupLink();
     }
     @Then("I verify {string} is visible on navigated screen")
     public void verifySignInTextONScreen(String expected)

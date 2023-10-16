@@ -52,7 +52,7 @@ public class UserSignUp
     @When("I click on the SignUp button")
     public void clickOnSignUpButton()
     {
-        homePage.clickOnLogin_SignupLink();
+        homePage.clickOnLoginSignupLink();
         LoggerHelper.logInfo("Signup b-utton is clicked.");
     }
     @Then("I verify that {string} is visible")
@@ -232,7 +232,7 @@ public class UserSignUp
     @And("I click on the SignUp button on screen")
     public void clickOnSignUpbutton()
     {
-        homePage.clickOnLogin_SignupLink();
+        homePage.clickOnLoginSignupLink();
     }
 
     @And("I Enter already registered {string} and {string} for signup")

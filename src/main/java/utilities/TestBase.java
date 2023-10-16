@@ -67,7 +67,7 @@ public class TestBase {
                 String edgeDriverPath = "src/test/resources/testDrivers/msedgedriver.exe";
                 System.setProperty("webdriver.edge.driver", edgeDriverPath);
                 EdgeOptions edgeOptions = new EdgeOptions();
-                // edgeOptions.addArguments("--headless");
+                edgeOptions.addArguments("--headless");
                 driver = new EdgeDriver(edgeOptions);
                 break;
             case "firefox":
@@ -99,7 +99,7 @@ public class TestBase {
         options.setAcceptInsecureCerts(true);
         options.addArguments("start-maximized");
         options.addArguments("disable-infobars");
-        //options.setBinary("C:\\Users\\ASUS1\\Downloads\\ChromeBrowser\\chrome-win64\\chrome-win64\\chrome.exe");
+        options.setBinary("C:\\Users\\ASUS1\\Downloads\\ChromeBrowser\\chrome-win64\\chrome-win64\\chrome.exe");
         options.addArguments("--disable-javascript");
         options.addArguments("ignore-certificate-errors");
         return options;

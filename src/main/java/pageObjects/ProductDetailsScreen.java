@@ -1,8 +1,4 @@
 package pageObjects;
-
-import logManager.LoggerHelper;
-import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -49,6 +45,24 @@ public class ProductDetailsScreen
 
     @FindBy(xpath = "//u[normalize-space()='View Cart']")
     private WebElement btnViewCart;
+
+    @FindBy(xpath = "//a[@href='#reviews']")
+    private WebElement textWriteYourReview;
+
+    @FindBy(css = "#name")
+    private WebElement textYourName;
+
+    @FindBy(css = "#email")
+    private WebElement textEmail;
+
+    @FindBy(css = "textarea#review")
+    private WebElement textAddReview;
+
+    @FindBy(xpath = "//button[@id='button-review']")
+    private WebElement btnSubmitReview;
+
+    @FindBy(xpath = "//span[normalize-space()='Thank you for your review.']")
+    private WebElement messageSuccessReview;
     //methods
 
     public boolean getProductNameField()
@@ -97,5 +111,37 @@ public class ProductDetailsScreen
     {
         elementsUtilities.elementClick(btnViewCart);
     }
+
+    public String getWriteYourReviewTexts()
+    {
+       return elementsUtilities.getTextsOfElement(textWriteYourReview).trim().toLowerCase();
+    }
+
+    public void setTextYourName(String name)
+    {
+        elementsUtilities.elementSendKeys(textYourName,name);
+    }
+
+    public void setTextEmail(String email)
+    {
+        elementsUtilities.elementSendKeys(textEmail,email);
+    }
+
+    public void setTextAddReview(String reviewTexts)
+    {
+        elementsUtilities.elementSendKeys(textAddReview,reviewTexts);
+    }
+
+    public void clickOnSubmitReviewButton()
+    {
+        elementsUtilities.elementClick(btnSubmitReview);
+    }
+
+    public String getSuccessReviewMessage()
+    {
+        genericUtils.waitForElementToBeVisible(messageSuccessReview,Duration.ofSeconds(5));
+        return elementsUtilities.getTextsOfElement(messageSuccessReview);
+    }
+
 
 }

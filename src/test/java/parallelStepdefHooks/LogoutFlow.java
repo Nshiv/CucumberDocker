@@ -32,7 +32,7 @@ public class LogoutFlow
     @And("I click on Sign in button on homepage")
     public  void clickOnSigninButton()
     {
-        homePage.clickOnLogin_SignupLink();
+        homePage.clickOnLoginSignupLink();
         LoggerHelper.logInfo("Clicked on signup link");
     }
     @Then("I validate {string} is visible")
