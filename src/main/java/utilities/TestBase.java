@@ -18,6 +18,7 @@ import java.net.URL;
 
 public class TestBase {
 
+
     private PropertyReader propertyReader;
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
