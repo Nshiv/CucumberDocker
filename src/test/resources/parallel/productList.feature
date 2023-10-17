@@ -1,6 +1,6 @@
 Feature: Product list screen visibility
 
-  @smoke
+  @new
   Scenario: Verify product list screen is visible
     Then Verify home page is visible with "Automation Exercise" as Title
     And  I Click on Products button

@@ -1,243 +1,75 @@
-17:59:13.611 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-17:59:27.617 [main] INFO  logManager.LoggerHelper - Total Number of links on homepage are 147
-17:59:27.831 [AsyncHttpClient-1-4] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
-java.net.SocketException: Connection reset
-	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[?:?]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[?:?]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:254) ~[netty-buffer-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.96.Final.jar:4.1.96.Final]
-	at java.lang.Thread.run(Thread.java:833) [?:?]
-17:59:32.312 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/contact_us
-17:59:32.325 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/13
-17:59:32.341 [main] INFO  logManager.LoggerHelper - https://www.youtube.com/c/AutomationExercise
-17:59:32.378 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#slider-carousel
-17:59:32.406 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/12
-17:59:32.429 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-17:59:32.436 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/11
-17:59:32.445 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/18
-17:59:32.470 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/16
-17:59:32.485 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/
-17:59:32.493 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-17:59:32.508 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/14
-17:59:32.523 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/products
-17:59:32.537 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/15
-17:59:32.545 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/
-17:59:32.566 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/38
-17:59:32.581 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/1
-17:59:32.628 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/4
-17:59:32.640 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/2
-17:59:32.667 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#slider-carousel
-17:59:32.691 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Women
-17:59:32.700 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/3
-17:59:32.708 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/5
-17:59:32.716 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/7
-17:59:32.747 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-17:59:32.765 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/39
-17:59:32.796 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-17:59:32.811 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-17:59:32.832 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-17:59:32.839 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/2
-17:59:32.855 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-17:59:32.862 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/40
-17:59:32.870 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Madame
-17:59:32.884 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Mast%20&%20Harbour
-17:59:32.898 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Polo
-17:59:32.905 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/7
-17:59:32.912 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/H&M
-17:59:32.934 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/8
-17:59:32.946 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Men
-17:59:32.954 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/3
-17:59:32.961 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/4
-17:59:32.975 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/5
-17:59:32.982 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/6
-17:59:32.989 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/6
-17:59:33.003 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Kids
-17:59:33.017 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/28
-17:59:33.031 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#top
-17:59:33.038 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#recommended-item-carousel
-17:59:33.045 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#recommended-item-carousel
-17:59:33.052 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/31
-17:59:33.075 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/29
-17:59:33.134 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/30
-17:59:33.172 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/view_cart
-17:59:33.179 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Biba
-17:59:33.186 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Kookie%20Kids
-17:59:33.207 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/1
-17:59:33.224 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/35
-17:59:33.245 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/33
-17:59:33.252 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Allen%20Solly%20Junior
-17:59:33.266 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Babyhug
-17:59:33.273 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/37
-17:59:33.301 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/21
-17:59:33.317 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/19
-17:59:33.343 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/20
-17:59:33.363 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/login
-17:59:33.376 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/42
-17:59:33.422 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/43
-17:59:33.428 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-17:59:33.454 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/22
-17:59:33.467 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/24
-17:59:33.474 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/41
-17:59:33.481 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/view_cart
-17:59:33.500 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/23
-18:02:21.113 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\ASUS1\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
-
-18:02:27.059 [main] INFO  logManager.LoggerHelper - Total Number of links on homepage are 147
-18:02:32.432 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/products
-18:02:32.451 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/8
-18:02:32.475 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/11
-18:02:32.490 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/view_cart
-18:02:32.498 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/13
-18:02:32.536 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/37
-18:02:32.543 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/12
-18:02:32.551 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/login
-18:02:32.559 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/39
-18:02:32.586 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/38
-18:02:32.594 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-18:02:32.602 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/40
-18:02:32.632 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/31
-18:02:32.646 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/
-18:02:32.661 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/33
-18:02:32.678 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-18:02:32.718 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/35
-18:02:32.744 [main] INFO  logManager.LoggerHelper - https://www.youtube.com/c/AutomationExercise
-18:02:32.776 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/24
-18:02:32.800 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/contact_us
-18:02:32.822 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#slider-carousel
-18:02:32.831 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/28
-18:02:32.855 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/30
-18:02:32.882 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/29
-18:02:32.905 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/20
-18:02:32.912 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/
-18:02:32.919 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-18:02:32.927 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-18:02:32.934 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-18:02:32.943 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-18:02:32.953 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Women
-18:02:32.963 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/22
-18:02:32.973 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#slider-carousel
-18:02:32.987 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
-18:02:33.001 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
-18:02:33.008 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/21
-18:02:33.021 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/23
-18:02:33.035 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/1
-18:02:33.056 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/16
-18:02:33.077 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/7
-18:02:33.084 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/2
-18:02:33.091 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Kids
-18:02:33.098 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/6
-18:02:33.109 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/3
-18:02:33.116 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Men
-18:02:33.123 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/H&M
-18:02:33.138 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Polo
-18:02:33.145 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/18
-18:02:33.152 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/5
-18:02:33.165 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/4
-18:02:33.186 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/19
-18:02:33.200 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Babyhug
-18:02:33.207 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Mast%20&%20Harbour
-18:02:33.214 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Madame
-18:02:33.220 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/view_cart
-18:02:33.227 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Biba
-18:02:33.234 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Kookie%20Kids
-18:02:33.240 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Allen%20Solly%20Junior
-18:02:33.255 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/1
-18:02:33.281 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/15
-18:02:33.302 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/14
-18:02:33.332 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/2
-18:02:33.382 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/3
-18:02:33.417 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#top
-18:02:33.433 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#recommended-item-carousel
-18:02:33.442 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/4
-18:02:33.451 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#recommended-item-carousel
-18:02:33.470 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/6
-18:02:33.495 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/5
-18:02:33.519 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/7
-18:02:33.526 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/41
-18:02:33.570 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/42
-18:02:33.596 [main] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/43
-18:02:40.119 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/30 Response code is 200
-18:02:41.235 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/31 Response code is 200
-18:02:42.426 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/29 Response code is 200
-18:02:43.578 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/2 Response code is 200
-18:02:44.723 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/view_cart Response code is 200
-18:02:45.870 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/Kookie%20Kids Response code is 200
-18:02:47.003 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/Biba Response code is 200
-18:02:48.198 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/1 Response code is 200
-18:02:49.363 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/35 Response code is 200
-18:02:50.553 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/37 Response code is 200
-18:02:51.728 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/38 Response code is 200
-18:02:52.969 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/33 Response code is 200
-18:02:54.126 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/Allen%20Solly%20Junior Response code is 200
-18:02:55.203 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/Mast%20&%20Harbour Response code is 200
-18:02:56.294 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/Babyhug Response code is 200
-18:02:57.468 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#Kids Response code is 200
-18:02:58.630 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/category_products/4 Response code is 200
-18:02:59.764 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/category_products/6 Response code is 200
-18:03:00.973 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/H&M Response code is 200
-18:03:02.067 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/Madame Response code is 200
-18:03:03.155 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/category_products/5 Response code is 200
-18:03:03.863 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/brand_products/Polo Response code is 200
-18:03:05.014 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/19 Response code is 200
-18:03:05.746 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/20 Response code is 200
-18:03:06.904 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/21 Response code is 200
-18:03:08.120 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#Men Response code is 200
-18:03:09.269 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/category_products/3 Response code is 200
-18:03:10.434 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/category_products/2 Response code is 200
-18:03:11.613 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/category_products/7 Response code is 200
-18:03:12.741 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/test_cases Response code is 200
-18:03:13.408 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/api_list Response code is 200
-18:03:14.549 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/22 Response code is 200
-18:03:15.269 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#Women Response code is 200
-18:03:15.931 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/category_products/1 Response code is 200
-18:03:17.051 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/test_cases Response code is 200
-18:03:18.200 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/api_list Response code is 200
-18:03:19.365 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/23 Response code is 200
-18:03:20.521 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/24 Response code is 200
-18:03:21.689 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/28 Response code is 200
-18:03:22.885 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/ Response code is 200
-18:03:24.015 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/test_cases Response code is 200
-18:03:25.163 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/api_list Response code is 200
-18:03:26.511 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/12 Response code is 200
-18:03:27.758 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/13 Response code is 200
-18:03:28.984 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#recommended-item-carousel Response code is 200
-18:03:30.132 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#recommended-item-carousel Response code is 200
-18:03:31.344 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#top Response code is 200
-18:03:32.571 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#slider-carousel Response code is 200
-18:03:33.817 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/#slider-carousel Response code is 200
-18:03:34.986 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/14 Response code is 200
-18:03:36.129 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/contact_us Response code is 200
-18:03:37.214 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/15 Response code is 200
-18:03:38.387 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/16 Response code is 200
-18:03:38.710 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.youtube.com/c/AutomationExercise Response code is 200
-18:03:39.872 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/18 Response code is 200
-18:03:41.024 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/api_list Response code is 200
-18:03:42.254 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/ Response code is 200
-18:03:43.405 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/40 Response code is 200
-18:03:44.577 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/41 Response code is 200
-18:03:45.756 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/39 Response code is 200
-18:03:46.836 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/login Response code is 200
-18:03:47.515 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/test_cases Response code is 200
-18:03:48.699 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/7 Response code is 200
-18:03:49.872 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/products Response code is 200
-18:03:51.045 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/view_cart Response code is 200
-18:03:52.204 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/11 Response code is 200
-18:03:53.369 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/8 Response code is 200
-18:03:54.563 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/6 Response code is 200
-18:03:55.279 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/42 Response code is 200
-18:03:56.446 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/43 Response code is 200
-18:03:57.602 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/4 Response code is 200
-18:03:58.739 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/3 Response code is 200
-18:03:59.907 [main] ERROR logManager.LoggerHelper - Working links is >> https://www.automationexercise.com/product_details/5 Response code is 200
+00:05:16.192 [main] INFO  org.testng.internal.Utils - [XmlSuite] [WARN] 'parallel' value 'true' is no longer valid, defaulting to 'methods'.
+00:05:24.179 [TestNG-PoolService-0] INFO  logManager.LoggerHelper - Total Number of links on homepage are 147
+00:05:24.436 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/24
+00:05:24.466 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/23
+00:05:24.583 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/28
+00:05:24.801 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/1
+00:05:24.817 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/2
+00:05:24.853 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/view_cart
+00:05:24.868 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Biba
+00:05:24.987 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/30
+00:05:25.004 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/29
+00:05:25.043 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#recommended-item-carousel
+00:05:25.055 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/33
+00:05:25.065 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#top
+00:05:25.078 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/31
+00:05:25.110 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#recommended-item-carousel
+00:05:25.120 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/H&M
+00:05:25.135 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Polo
+00:05:25.148 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Mast%20&%20Harbour
+00:05:25.156 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Madame
+00:05:25.165 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Kids
+00:05:25.174 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/5
+00:05:25.184 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/4
+00:05:25.194 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Allen%20Solly%20Junior
+00:05:25.203 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Babyhug
+00:05:25.211 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/brand_products/Kookie%20Kids
+00:05:25.225 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/37
+00:05:25.316 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/35
+00:05:25.530 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/38
+00:05:25.552 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/
+00:05:25.579 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/41
+00:05:25.594 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/40
+00:05:25.665 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/39
+00:05:25.679 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/5
+00:05:25.766 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/4
+00:05:25.791 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/3
+00:05:25.914 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/43
+00:05:25.978 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/11
+00:05:25.992 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/8
+00:05:26.055 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/7
+00:05:26.064 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
+00:05:26.080 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/6
+00:05:26.088 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/contact_us
+00:05:26.097 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/42
+00:05:26.105 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.youtube.com/c/AutomationExercise
+00:05:26.122 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/12
+00:05:26.156 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/14
+00:05:26.165 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/13
+00:05:26.199 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/products
+00:05:26.215 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
+00:05:26.224 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/view_cart
+00:05:26.231 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/login
+00:05:26.254 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/15
+00:05:26.261 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/19
+00:05:26.292 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/18
+00:05:26.300 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/16
+00:05:26.317 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Women
+00:05:26.324 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#slider-carousel
+00:05:26.331 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/2
+00:05:26.340 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/1
+00:05:26.348 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
+00:05:26.356 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
+00:05:26.364 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#Men
+00:05:26.373 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/7
+00:05:26.380 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/6
+00:05:26.389 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/category_products/3
+00:05:26.396 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/20
+00:05:26.424 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/22
+00:05:26.459 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/product_details/21
+00:05:26.466 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/#slider-carousel
+00:05:26.472 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list
+00:05:26.480 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
+00:05:26.486 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/
+00:05:26.493 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/test_cases
+00:05:26.499 [TestNG-PoolService-1] INFO  logManager.LoggerHelper - https://www.automationexercise.com/api_list

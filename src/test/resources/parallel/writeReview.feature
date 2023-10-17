@@ -1,5 +1,5 @@
 Feature: Add review for product
-  @smoke
+  @new
   Scenario: Adding review on product
     When I verify homepage Title is "Automation Exercise"
     And I click on view product button on homepage screen

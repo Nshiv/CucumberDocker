@@ -19,12 +19,12 @@ import utilities.PropertyReader;
 
 public class TestParallel extends AbstractTestNGCucumberTests
 {
-     /*  @Override
-       @DataProvider(parallel = false)
+      @Override
+       @DataProvider(parallel = true)
        public Object[][] scenarios()
        {
           return super.scenarios();
-       }*/
+       }
 
     /*@BeforeTest
     @Parameters("browser")

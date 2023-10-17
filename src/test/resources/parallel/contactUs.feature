@@ -1,6 +1,6 @@
 Feature: Contact us form homepage
 
-  @smoke
+  @new
   Scenario: User connects with us with contact us form
     Then I verify that homepage Title is "Automation Exercise" displays on screen
     And I click on Contact us button
