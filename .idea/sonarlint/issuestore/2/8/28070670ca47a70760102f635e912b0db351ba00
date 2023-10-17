@@ -1,10 +1,8 @@
 
 Z	java:S112]"FDefine and throw a dedicated exception instead of using a generic one.(ìÝ°^
-s
-java:S1450"]Remove the "propertyReader" field and declare it as a local variable in the relevant methods.(…ºÄñ
-‚
-java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ö ÷Û
-Q	java:S125F"<This block of commented-out lines of code should be removed.(ó“ÝÆ
-V	java:S125f"<This block of commented-out lines of code should be removed.(Î°Ð¼þÿÿÿÿ
-J
-java:S1128"4Remove this unused import 'logManager.LoggerHelper'.(öÒ‡Ý
+z
+java:S1450"]Remove the "propertyReader" field and declare it as a local variable in the relevant methods.(…ºÄñ8Œ§ÄÂ³1
+‰
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ö ÷Û8§ÄÂ³1
+Q
+java:S1128"4Remove this unused import 'logManager.LoggerHelper'.(öÒ‡Ý8°§ÄÂ³1

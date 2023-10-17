@@ -28,11 +28,11 @@ public class Hooks
         propertyReader= new PropertyReader();
         //String browser = System.getProperty("browser");
         String project_url = propertyReader.getProjectURL();
-        String testNGBrowser = propertyReader.getTestNGBrowser();
-        //String browser = propertyReader.getBrowser();
+        //String testNGBrowser = propertyReader.getTestNGBrowser();
+        String browser = propertyReader.getBrowser();
         testBase = new TestBase();
         try {
-            driver = testBase.webDriverManager(testNGBrowser);
+            driver = testBase.webDriverManager(browser);
         }catch (IOException e)
         {
             LoggerHelper.logError("weddriver issues "+e.getMessage());

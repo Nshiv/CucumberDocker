@@ -1,0 +1,15 @@
+
+m
+java:S1104"RMake driver a static final constant or non-public and provide accessors if needed.(ÔèË©úÿÿÿÿ
+s
+java:S1104"XMake genericUtils a static final constant or non-public and provide accessors if needed.(Ëåö‹øÿÿÿÿ
+x
+java:S1104"]Make elementsUtilities a static final constant or non-public and provide accessors if needed.(¼¹œ’şÿÿÿÿ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÉÙ÷T
+r	java:S116$"XRename this field "link_viewCart" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì˜¥ƒşÿÿÿÿ
+o	java:S116'"URename this field "search_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÃÕŠüÿÿÿÿ
+o	java:S116*"URename this field "btn_search" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦²ÁÁúÿÿÿÿ
+A
+java:S1168Z"+Return an empty collection instead of null.(¥¹ï
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ

@@ -98,8 +98,8 @@ public class ElementsUtilities
             LoggerHelper.logError("Issues with checking visibility of " + element + ": " + e.getMessage());
         }
         return null;
-
     }
+
 
 
 }

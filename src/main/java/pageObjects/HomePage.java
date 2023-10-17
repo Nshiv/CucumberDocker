@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.cucumber.java.sl.In;
 import logManager.LoggerHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,8 @@ import utilities.ElementsUtilities;
 import utilities.GenericUtils;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomePage
 {
@@ -60,6 +63,9 @@ public class HomePage
 
     @FindBy(css = "a#scrollUp")
     private WebElement scrollUpButton;
+
+    @FindBy(tagName = "a")
+    private List<WebElement> allLInks;
 
 
 
@@ -136,5 +142,15 @@ public class HomePage
     public void scrollUpTillBanner()
     {
         genericUtils.scrollIntoView(scrollUpButton);
+    }
+
+    public int gelLinksCount()
+    {
+        return allLInks.size();
+    }
+
+    public List<WebElement> getAllLinks()
+    {
+        return allLInks;
     }
 }
