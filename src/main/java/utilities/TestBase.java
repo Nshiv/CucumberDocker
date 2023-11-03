@@ -18,14 +18,11 @@ import java.net.URL;
 
 public class TestBase {
 
-
-    private PropertyReader propertyReader;
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
     public WebDriver webDriverManager(String browser) throws IOException {
-        propertyReader = new PropertyReader();
-        String platform = propertyReader.getPlateform();
-        String hubURL = propertyReader.getHubURL();
+        String platform = PropertyReader.getPlateform();
+        String hubURL = PropertyReader.getHubURL();
 
         WebDriver driver;
 
@@ -55,7 +52,9 @@ public class TestBase {
         }
     }
 
-    private WebDriver createLocalDriver(String browser) {
+    private WebDriver createLocalDriver(String browser)
+    {
+        System.out.println("In test base class"+browser);
         WebDriver driver;
         switch (browser.trim().toLowerCase()) {
             case "chrome":
@@ -68,7 +67,7 @@ public class TestBase {
                 String edgeDriverPath = "src/test/resources/testDrivers/msedgedriver.exe";
                 System.setProperty("webdriver.edge.driver", edgeDriverPath);
                 EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments("--headless");
+                //edgeOptions.addArguments("--headless");
                 driver = new EdgeDriver(edgeOptions);
                 break;
             case "firefox":
@@ -76,6 +75,7 @@ public class TestBase {
                 System.setProperty("webdriver.gecko.driver", geckoDriverPath);
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.setAcceptInsecureCerts(true);
+                //firefoxOptions.addArguments("--headless");
                 driver = new FirefoxDriver(firefoxOptions);
                 break;
             default:
@@ -87,10 +87,10 @@ public class TestBase {
     private WebDriver createRemoteDriver(String browser, String hubURL) {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName(browser);
-        capabilities.setPlatform(Platform.LINUX);
         try {
             return new RemoteWebDriver(new URL(hubURL), capabilities);
         } catch (MalformedURLException e) {
+
             throw new RuntimeException("Failed to create a RemoteWebDriver instance.", e);
         }
     }
@@ -98,6 +98,7 @@ public class TestBase {
     private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         options.setAcceptInsecureCerts(true);
+        //options.addArguments("--headless");
         options.addArguments("start-maximized");
         options.addArguments("disable-infobars");
         options.setBinary("C:\\Users\\ASUS1\\Downloads\\ChromeBrowser\\chrome-win64\\chrome-win64\\chrome.exe");

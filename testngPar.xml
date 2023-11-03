@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="local_parallel"  >
-    <test name="edgeTest" parallel="true" thread-count="2">
-        <parameter name="browser" value="edge"/>
+<suite name="remote_parallel"  parallel="tests" thread-count="2">
+    <test name="firefoxTest">
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="parallelStepdefHooks.TestParallel"> </class>
         </classes>

@@ -43,3 +43,21 @@ i
 -src/test/java/parallelStepdefHooks/Hooks.java,3\3\33e31b27bd53b06513416775872a0d8fa7268567
 C
 logs/automation.log,c\a\ca3e0c7b6180246ea05187332ba5d8eb667e8dab
+i
+9src/test/java/parallelStepdefHooks/LinksCountStepDef.java,3\a\3a1839001cec3d6ada3d2baf39511b7b9d00f133
+P
+ seleniumGrid/docker-compose.yaml,6\9\69b6a3226fce0b2fff04fbb2e84e70ef59ed9763
+[
++src/main/java/utilities/PropertyReader.java,7\b\7bff9d305a3d1f83c8ad45ed7e501350995cf00d
+R
+"seleniumGrid/dockerMaxSession.yaml,1\7\17124527dcfb78d6ff2fe00cc67776d146172788
+a
+1src/test/java/parallelStepdefHooks/ContactUs.java,4\0\40abbbc7fb54756d9524a9e89a0122de97507ab9
+\
+,src/main/java/pageObjects/ContactUsForm.java,c\9\c9bbef652525fcde2b11dd61277f92704635d53d
+\
+,src/main/java/pageObjects/TestCasesPage.java,2\0\2000cc6ff8fcc33f753eecab6513a5f077f5653f
+N
+src/test/java/util/Config.java,4\b\4bc0b6e3b935d7db081ee634a7edac6e7f039839
+N
+logs/automation-2023-11-03.log,d\7\d7bbb70c94181818b2685dddcba57a6b99e0cbca

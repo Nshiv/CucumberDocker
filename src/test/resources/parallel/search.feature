@@ -1,6 +1,6 @@
 Feature: Search products
 
-  @new
+  @smoke
   Scenario:Search with a keyword and verify products on listing
     Then I verify that homepage Title is "Automation Exercise" displays on screen
     And  I Click on Products button

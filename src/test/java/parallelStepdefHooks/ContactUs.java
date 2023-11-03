@@ -9,6 +9,7 @@ import pageObjects.HomePage;
 import utilities.ContextSetUp;
 import utilities.GenericUtils;
 
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 
@@ -67,8 +68,7 @@ public class ContactUs
     }
 
     @And("I uploads a file")
-    public void uploadFileOnContactUsForm()
-    {
+    public void uploadFileOnContactUsForm() throws URISyntaxException {
         contactUsForm.setUpload();
     }
 

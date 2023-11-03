@@ -11,7 +11,7 @@ import utilities.PropertyReader;
         glue = {"parallelStepdefHooks"},
         features = "src/test/resources/parallel",
         monochrome = true,
-        tags="@new ",
+        tags="@smoke",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failed_scenarios.txt",
         "timeline:test-output-thread/",
        }
@@ -26,11 +26,10 @@ public class TestParallel extends AbstractTestNGCucumberTests
           return super.scenarios();
        }
 
-    /*@BeforeTest
+    @BeforeTest
     @Parameters("browser")
     public void beforeTest(String browser) {
-           PropertyReader propertyReader = new PropertyReader();
-           propertyReader.setTestNGBrowser(browser);
+           PropertyReader.setTestNGBrowser(browser);
 
-    }*/
+    }
 }

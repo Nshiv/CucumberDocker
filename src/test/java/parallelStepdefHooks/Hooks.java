@@ -25,14 +25,12 @@ public class Hooks
     //private List<String> browsers;
     @Before(order = 0)
     public void launchBrowser() {
-        propertyReader= new PropertyReader();
-        //String browser = System.getProperty("browser");
-        String project_url = propertyReader.getProjectURL();
-        //String testNGBrowser = propertyReader.getTestNGBrowser();
-        String browser = propertyReader.getBrowser();
+        String project_url = PropertyReader.getProjectURL();
+        String testNGBrowser = propertyReader.getTestNGBrowser();
+        //String browser = PropertyReader.getBrowser();
         testBase = new TestBase();
         try {
-            driver = testBase.webDriverManager(browser);
+            driver = testBase.webDriverManager(testNGBrowser);
         }catch (IOException e)
         {
             LoggerHelper.logError("weddriver issues "+e.getMessage());
@@ -40,7 +38,6 @@ public class Hooks
         driver.manage().window().maximize();
         driver.get(project_url);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
     }
 
     @After(order = 1)

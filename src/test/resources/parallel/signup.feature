@@ -27,7 +27,7 @@ Feature: User Signup
     Then I verify that "ACCOUNT DELETED!" is displays
     And I click the Continue button on screen
 
-    @smoke
+    @new
     Scenario: Register User with existing email
       Then I verify that homepage Title is "Automation Exercise" displays on screen
       And I click on the SignUp button on screen

@@ -1,10 +1,10 @@
 Feature: Links on website
-  @new
+  @smoke
   Scenario: Validate total links on page
     Then  I verify homepage Title is "Automation Exercise"
     And I log all the links present on Homepage screen
 
-  @new
+  @smoke
   Scenario: Print all the links present on HomePage screen
     Then I verify homepage Title is "Automation Exercise"
     And I print all the links in Logger file

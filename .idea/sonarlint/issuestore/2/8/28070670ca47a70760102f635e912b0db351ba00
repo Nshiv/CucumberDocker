@@ -1,8 +1,12 @@
 
-Z	java:S112]"FDefine and throw a dedicated exception instead of using a generic one.(ìİ°^
-z
-java:S1450"]Remove the "propertyReader" field and declare it as a local variable in the relevant methods.(…ºÄñ8Œ§ÄÂ³1
+a	java:S112^"FDefine and throw a dedicated exception instead of using a generic one.(ìİ°^8¢§ê«¹1
 ‰
-java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ö ÷Û8§ÄÂ³1
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ö ÷Û8»§ê«¹1
+G	java:S1069"+Replace this use of System.out by a logger.(øµòÃ8¿§ê«¹1
+X	java:S125F"<This block of commented-out lines of code should be removed.(ó“İÆ8Ä§ê«¹1
+]	java:S125N"<This block of commented-out lines of code should be removed.(ş ³Øûÿÿÿÿ8Æ§ê«¹1
+X	java:S125e"<This block of commented-out lines of code should be removed.(ªÍ¾Ê8Í§ê«¹1
 Q
-java:S1128"4Remove this unused import 'logManager.LoggerHelper'.(öÒ‡İ8°§ÄÂ³1
+java:S1128"4Remove this unused import 'logManager.LoggerHelper'.(öÒ‡İ8Î§ê«¹1
+V
+java:S1128"9Remove this unused import 'org.openqa.selenium.Platform'.(…§èÌ8Î§ê«¹1

@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ElementsUtilities;
 
+import java.io.File;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
+
 
 public class ContactUsForm {
     public WebDriver driver;
@@ -67,10 +71,14 @@ public class ContactUsForm {
           elementsUtilities.elementSendKeys(textMessage,message);
     }
 
-    public void setUpload() {
-            String filePath ="D:\\TestUploadFiles\\Books+API.pdf";
-            elementsUtilities.elementSendKeys(uploadFile,filePath);
+    public void setUpload() throws URISyntaxException {
+        String projetRoot = System.getProperty("user.dir");
+        String absoluteFilePath =projetRoot+"\\src\\test\\resources\\testData\\BooksAPI.pdf";
+        System.out.println("File path: "+absoluteFilePath); // Debug log
+        System.out.println("File path: " + absoluteFilePath); // Debug log
+        elementsUtilities.elementSendKeys(uploadFile, absoluteFilePath);
     }
+
 
     public void clickSubmitButton() {
           elementsUtilities.elementClick(btnSubmit);
